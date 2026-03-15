@@ -1,0 +1,25 @@
+{
+  "name": "History Chess - Play Through the Ages",
+  "short_name": "History Chess",
+  "description": "Strategic chess through history. Play as 10 legendary civilizations in 13 languages!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1208",
+  "theme_color": "#CD7F32",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "entertainment", "education"]
+}

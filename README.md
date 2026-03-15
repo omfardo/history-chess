@@ -1,2 +1,0 @@
-# history-chess
-history-chess

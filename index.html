@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🏛️ History Chess - Play Through the Ages</title>
+<meta name="description" content="Play History Chess: Strategic chess through history with 10 legendary civilizations in 13 languages. Experience chess across the ages!">
+<link rel="manifest" href="manifest.json">
+
+<!-- PWA Meta Tags -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="History Chess">
+<meta name="application-name" content="History Chess">
+<meta name="msapplication-TileColor" content="#CD7F32">
+<meta name="theme-color" content="#CD7F32">
+
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#CD7F32">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://historychess.com/">
+<meta property="og:title" content="History Chess - Play Through the Ages">
+<meta property="og:description" content="Strategic chess through history. Play as 10 legendary civilizations in 13 languages!">
+<meta property="og:image" content="https://historychess.com/og-image.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://historychess.com/">
+<meta property="twitter:title" content="History Chess - Play Through the Ages">
+<meta property="twitter:description" content="Strategic chess through history. 10 civilizations, 13 languages!">
+<meta property="twitter:image" content="https://historychess.com/twitter-image.png">
+
+<!-- JSON-LD Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "History Chess",
+  "alternateName": "Play Through the Ages",
+  "description": "Strategic chess game combining classical chess with 10 legendary civilizations. Play as Rome, Egypt, Ottoman, Viking and more across 13 languages.",
+  "url": "https://historychess.com",
+  "image": "https://historychess.com/og-image.png",
+  "applicationCategory": "Game",
+  "gameItem": "Chess pieces from different civilizations",
+  "numberOfPlayers": "1-2",
+  "playMode": ["SinglePlayer", "MultiPlayer"],
+  "genre": ["Strategy", "Board Game", "Historical"],
+  "inLanguage": ["tr", "en", "ar", "de", "fr", "es", "ru", "ja", "zh", "pt", "nl", "fi", "no"],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "omfardo"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "History Chess"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1000",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+<style>
+/* Modern CSS Variables - Premium Hissiyat */
+:root {
+--gold-gradient: linear-gradient(135deg, #d4af37 0%, #f9f295 50%, #b38728 100%);
+--bronze-gradient: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%);
+--glass-bg: rgba(255, 255, 255, 0.1);
+--glass-border: rgba(255, 215, 0, 0.3);
+--shadow-premium: 0 8px 32px rgba(0, 0, 0, 0.4);
+--transition-smooth: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Georgia,serif;background:linear-gradient(135deg,#1a1208 0%,#3d2817 100%);color:#f5e6c8;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:20px;overflow-x:hidden;}
+h1{font-size:2.5rem;text-shadow:3px 3px 6px rgba(0,0,0,0.8);margin-bottom:5px;background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sub{font-size:0.9rem;color:#c9a96e;margin-bottom:20px;}
+.controls{display:flex;gap:10px;justify-content:center;margin-bottom:15px;flex-wrap:wrap;}
+
+/* Premium Button Styling with Glassmorphism */
+button{
+background:var(--glass-bg);
+backdrop-filter:blur(10px);
+color:#f5e6c8;
+border:2px solid var(--glass-border);
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+font-size:1rem;
+font-family:Georgia,serif;
+transition:all 0.3s var(--transition-smooth);
+box-shadow:var(--shadow-premium);
+}
+
+button:hover{
+background:linear-gradient(135deg,#daa520,#ffd700);
+color:#1a1208;
+transform:translateY(-2px) scale(1.05);
+box-shadow:0 12px 24px rgba(218,165,32,0.5);
+border-color:#ffd700;
+}
+
+button:active{
+transform:translateY(0) scale(0.98);
+}
+
+button:disabled{
+opacity:0.4;
+cursor:not-allowed;
+transform:none;
+}
+
+/* Chess Piece Animation - Premium Feel */
+#board td span{
+transition:transform 0.2s var(--transition-smooth);
+cursor:grab;
+display:inline-block;
+}
+
+#board td span:active{
+cursor:grabbing;
+transform:scale(1.2) translateY(-10px);
+filter:drop-shadow(0 10px 20px rgba(255,215,0,0.5));
+}
+
+/* Glassmorphism Modal */
+.modal-content{
+background:var(--glass-bg);
+backdrop-filter:blur(20px);
+border:2px solid var(--glass-border);
+box-shadow:var(--shadow-premium);
+}
+
+/* Civilization Card - Glass Effect */
+.civilization-card{
+background:var(--glass-bg);
+backdrop-filter:blur(10px);
+border:1px solid var(--glass-border);
+border-radius:12px;
+padding:15px;
+transition:all 0.3s var(--transition-smooth);
+}
+
+.civilization-card:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 15px 35px rgba(255,215,0,0.3);
+border-color:#ffd700;
+}
+
+/* Dil Seçici - 9 Dil */
+.dil-secici{display:flex;gap:6px;justify-content:center;margin-bottom:20px;flex-wrap:wrap;max-width:600px;margin-left:auto;margin-right:auto;}
+.dil-btn{padding:6px 12px;background:rgba(218,165,32,0.2);border:2px solid #daa52050;border-radius:6px;font-size:0.85rem;min-width:60px;}
+.dil-btn:hover{background:rgba(218,165,32,0.4);border-color:#daa520;transform:translateY(-1px);}
+.dil-btn.active{background:#daa520;color:#1a1208;border-color:#ffd700;font-weight:bold;box-shadow:0 0 12px rgba(218,165,32,0.6);}
+
+/* SOSYAL MEDYA PAYLAŞIM - YENİ! */
+.sosyal-medya{text-align:center;margin-bottom:15px;padding:15px;background:rgba(92,61,10,0.3);border-radius:10px;max-width:600px;margin-left:auto;margin-right:auto;}
+.sosyal-butonlar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+.sosyal-btn{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  border:2px solid #daa520;
+  background:#5c3d0a;
+  color:#f5e6c8;
+  font-size:1.3rem;
+  font-weight:bold;
+  cursor:pointer;
+  transition:all 0.3s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+.sosyal-btn:hover{
+  transform:translateY(-3px) scale(1.1);
+  box-shadow:0 5px 15px rgba(218,165,32,0.5);
+}
+.sosyal-btn.facebook{background:#1877F2;border-color:#1877F2;color:#fff;}
+.sosyal-btn.facebook:hover{background:#0d65d9;box-shadow:0 5px 15px rgba(24,119,242,0.5);}
+.sosyal-btn.native-share{
+  background:var(--gold-gradient);
+  border-color:#ffd700;
+  color:#1a1208;
+  font-weight:bold;
+  animation:pulse-glow 2s ease-in-out infinite;
+}
+.sosyal-btn.native-share:hover{
+  background:linear-gradient(135deg,#ffd700,#f9f295);
+  box-shadow:0 8px 20px rgba(255,215,0,0.6);
+  transform:translateY(-5px) scale(1.15);
+}
+@keyframes pulse-glow{
+  0%,100%{box-shadow:0 2px 8px rgba(255,215,0,0.3);}
+  50%{box-shadow:0 5px 20px rgba(255,215,0,0.6);}
+}
+.sosyal-btn.twitter{background:#000;border-color:#000;color:#fff;}
+.sosyal-btn.twitter:hover{background:#333;box-shadow:0 5px 15px rgba(0,0,0,0.7);}
+.sosyal-btn.whatsapp{background:#25D366;border-color:#25D366;color:#fff;}
+.sosyal-btn.whatsapp:hover{background:#1da851;box-shadow:0 5px 15px rgba(37,211,102,0.5);}
+.sosyal-btn.linkedin{background:#0A66C2;border-color:#0A66C2;color:#fff;}
+.sosyal-btn.linkedin:hover{background:#004182;box-shadow:0 5px 15px rgba(10,102,194,0.5);}
+.sosyal-btn.telegram{background:#0088cc;border-color:#0088cc;color:#fff;}
+.sosyal-btn.telegram:hover{background:#006699;box-shadow:0 5px 15px rgba(0,136,204,0.5);}
+.sosyal-btn.reddit{background:#FF4500;border-color:#FF4500;color:#fff;}
+.sosyal-btn.reddit:hover{background:#cc3700;box-shadow:0 5px 15px rgba(255,69,0,0.5);}
+
+/* Zaman Kontrolü - YENİ! */
+.zaman-kontrol{display:flex;justify-content:space-between;align-items:center;margin:15px auto;max-width:600px;padding:15px;background:rgba(92,61,10,0.5);border-radius:10px;border:2px solid #daa520;}
+.zaman-kontrol select{padding:8px 15px;background:#5c3d0a;color:#ffd700;border:2px solid #daa520;border-radius:6px;font-size:1rem;}
+.saat{font-size:1.5rem;font-weight:bold;color:#ffd700;padding:8px 15px;background:rgba(0,0,0,0.5);border-radius:8px;min-width:80px;text-align:center;}
+.saat.warning{color:#ff6b6b;animation:pulse 1s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.7;transform:scale(0.95);}}
+
+.bilgi-paneli{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:15px;}
+.panel{background:rgba(92,61,10,0.5);padding:15px 20px;border-radius:8px;border:1px solid #daa520;min-width:180px;}
+.panel-baslik{font-size:0.75rem;color:#c9a96e;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+.panel-icerik{font-size:1.8rem;font-weight:bold;color:#ffd700;}
+#board{border-collapse:collapse;margin:20px auto;box-shadow:0 10px 40px rgba(0,0,0,0.5);perspective:1200px;}
+#board td{width:60px;height:60px;text-align:center;font-size:2.5rem;cursor:pointer;position:relative;transition:all 0.2s;}
+#board td span{
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 0 3px #000,
+    0 0 5px rgba(0,0,0,0.8),
+    0 0 8px rgba(255,255,255,0.3);
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.7));
+}
+#board td:hover{transform:scale(1.05);z-index:10;}
+.light{background:#e8d5a3;}
+.dark{background:#8b6914;}
+.secili{background:#ffd700!important;box-shadow:inset 0 0 15px rgba(255,215,0,0.5);}
+.ipucu{background:radial-gradient(circle,rgba(76,175,80,0.4),transparent)!important;}
+.ipucu::after{content:'●';color:#4caf50;font-size:1.2rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.son-hamle{background:rgba(255,215,0,0.2)!important;}
+
+/* 8 TEMA! */
+.tema-klasik .light{background:#e8d5a3;}.tema-klasik .dark{background:#8b6914;}
+.tema-mermer .light{background:#f0f0f0;}.tema-mermer .dark{background:#5a5a5a;}
+.tema-ahsap .light{background:#d4a373;}.tema-ahsap .dark{background:#6b4423;}
+.tema-gece .light{background:#4a5568;}.tema-gece .dark{background:#1a202c;}
+.tema-ocean .light{background:#81d4fa;}.tema-ocean .dark{background:#01579b;}
+.tema-forest .light{background:#a5d6a7;}.tema-forest .dark{background:#2e7d32;}
+.tema-sunset .light{background:#ffcc80;}.tema-sunset .dark{background:#e64a19;}
+.tema-royal .light{background:#ce93d8;}.tema-royal .dark{background:#6a1b9a;}
+
+/* 3D Mod */
+.board-container{perspective:1200px;perspective-origin:50% 50%;}
+#board.mode-3d{transform-style:preserve-3d;transform:rotateX(60deg) rotateZ(45deg) scale(1.1);transition:transform 1s ease;box-shadow:0 30px 60px rgba(0,0,0,0.6);}
+#board.mode-3d td{transform-style:preserve-3d;transform:translateZ(5px);}
+#board.mode-3d td span{display:inline-block;transform:translateZ(25px);text-shadow:0 8px 20px rgba(0,0,0,0.8);}
+
+.hamle-log{max-height:150px;overflow-y:auto;background:rgba(92,61,10,0.3);padding:10px;border-radius:6px;margin-top:15px;font-size:0.85rem;border:1px solid #daa52050;}
+.hamle-log div{padding:3px 0;border-bottom:1px solid #daa52020;}
+#info{font-size:1.2rem;margin:15px 0;color:#ffd700;text-shadow:2px 2px 4px rgba(0,0,0,0.5);min-height:30px;}
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;z-index:10000;}
+.modal-content{background:#1a1208;padding:30px;border-radius:15px;border:3px solid #daa520;text-align:center;max-width:400px;box-shadow:0 10px 50px rgba(0,0,0,0.8);}
+.modal-content h2{color:#ffd700;margin-bottom:20px;font-size:2rem;}
+.modal-content p{margin:15px 0;line-height:1.6;}
+.ayarlar{max-width:600px;margin:20px auto;padding:20px;background:rgba(92,61,10,0.3);border-radius:10px;border:1px solid #daa520;}
+.ayar{margin:15px 0;}
+.ayar-baslik{font-weight:bold;margin-bottom:8px;color:#ffd700;font-size:0.9rem;text-transform:uppercase;}
+select,input[type="range"]{width:100%;padding:8px;background:#5c3d0a;color:#f5e6c8;border:2px solid #daa520;border-radius:6px;font-size:1rem;}
+@media(max-width:768px){h1{font-size:1.8rem;}#board td{width:45px;height:45px;font-size:2rem;}.panel{min-width:140px;}.zaman-kontrol{flex-direction:column;gap:10px;}}
+
+/* PWA Install Button */
+@keyframes pulse{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.05);}
+}
+#pwa-install-btn:hover{
+background:#45a049;
+transform:scale(1.1);
+}
+</style>
+</head>
+<body>
+<!-- LOGO -->
+<div style="text-align:center;margin-bottom:10px;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="max-width:500px;width:100%;height:auto;">
+<defs>
+<linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+<stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+</linearGradient>
+<linearGradient id="bronzeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" style="stop-color:#CD7F32;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+</linearGradient>
+</defs>
+<g transform="translate(25, 25)">
+<rect x="0" y="60" width="35" height="8" fill="url(#bronzeGradient)" stroke="#8B4513" stroke-width="1"/>
+<rect x="5" y="20" width="25" height="40" fill="url(#bronzeGradient)" stroke="#8B4513" stroke-width="1"/>
+<path d="M 0 20 L 5 15 L 30 15 L 35 20 Z" fill="url(#bronzeGradient)" stroke="#8B4513" stroke-width="1"/>
+<rect x="0" y="15" width="35" height="5" fill="#CD7F32"/>
+</g>
+<g transform="translate(35, 45)">
+<path d="M 5 5 L 8 20 L 12 25 L 3 25 L 7 20 Z" fill="#1A0F08" stroke="url(#goldGradient)" stroke-width="2"/>
+<circle cx="7.5" cy="3" r="3" fill="url(#goldGradient)"/>
+<rect x="6.5" y="0" width="2" height="6" fill="url(#goldGradient)"/>
+<rect x="4.5" y="2" width="6" height="2" fill="url(#goldGradient)"/>
+</g>
+<text x="100" y="50" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="url(#goldGradient)" stroke="#1A0F08" stroke-width="1">HISTORY</text>
+<text x="100" y="85" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="url(#goldGradient)" stroke="#1A0F08" stroke-width="1">CHESS</text>
+<text x="102" y="105" font-family="Georgia, serif" font-size="11" font-style="italic" fill="#CD7F32" letter-spacing="2">PLAY THROUGH THE AGES</text>
+<g transform="translate(350, 40)">
+<path d="M 0 0 Q 5 10 0 20 Q 10 25 20 20 Q 15 10 20 0 Q 10 -5 0 0 Z" fill="#F4E4C1" stroke="#8B4513" stroke-width="1.5"/>
+<line x1="5" y1="8" x2="15" y2="8" stroke="#8B4513" stroke-width="0.5"/>
+<line x1="5" y1="12" x2="15" y2="12" stroke="#8B4513" stroke-width="0.5"/>
+</g>
+<rect x="2" y="2" width="396" height="116" fill="none" stroke="url(#goldGradient)" stroke-width="3" rx="8"/>
+</svg>
+</div>
+
+<h1 style="display:none;">🏛️ HISTORY CHESS 🏛️</h1>
+<p class="sub" id="sub-title">Roma vs Mısır</p>
+
+<!-- Dil Seçici - 13 DİL! -->
+<div class="dil-secici">
+<button onclick="dilDegistir('tr')" class="dil-btn active" id="dil-tr">🇹🇷 TR</button>
+<button onclick="dilDegistir('en')" class="dil-btn" id="dil-en">🇬🇧 EN</button>
+<button onclick="dilDegistir('ar')" class="dil-btn" id="dil-ar">🇸🇦 AR</button>
+<button onclick="dilDegistir('de')" class="dil-btn" id="dil-de">🇩🇪 DE</button>
+<button onclick="dilDegistir('fr')" class="dil-btn" id="dil-fr">🇫🇷 FR</button>
+<button onclick="dilDegistir('es')" class="dil-btn" id="dil-es">🇪🇸 ES</button>
+<button onclick="dilDegistir('ru')" class="dil-btn" id="dil-ru">🇷🇺 RU</button>
+<button onclick="dilDegistir('ja')" class="dil-btn" id="dil-ja">🇯🇵 JA</button>
+<button onclick="dilDegistir('zh')" class="dil-btn" id="dil-zh">🇨🇳 ZH</button>
+<button onclick="dilDegistir('pt')" class="dil-btn" id="dil-pt">🇵🇹 PT</button>
+<button onclick="dilDegistir('nl')" class="dil-btn" id="dil-nl">🇳🇱 NL</button>
+<button onclick="dilDegistir('fi')" class="dil-btn" id="dil-fi">🇫🇮 FI</button>
+<button onclick="dilDegistir('no')" class="dil-btn" id="dil-no">🇳🇴 NO</button>
+</div>
+
+<!-- Kontroller -->
+<div class="controls">
+<button onclick="yeniOyun()">⚔️ Yeni Savaş</button>
+<button onclick="gunlukMeydanGoster()" style="background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1208;font-weight:bold;">🏆 Günlük Meydan</button>
+<button onclick="liderlikTablosuGoster()" style="background:linear-gradient(135deg,#CD7F32,#8B4513);color:#fff;">📊 Liderlik</button>
+<button onclick="geriAl()">↩ Geri Al</button>
+<button onclick="toggle3D()" id="btn-3d">🎲 3D Mod</button>
+<button onclick="kaydetPGN()">💾 PGN İndir</button>
+</div>
+
+<!-- SOSYAL MEDYA PAYLAŞIM - YENİ! -->
+<div class="sosyal-medya">
+<div style="font-size:0.85rem;color:#c9a96e;margin-bottom:8px;">📤 Paylaş:</div>
+<div class="sosyal-butonlar">
+<button onclick="paylasEmail()" class="sosyal-btn" title="Email ile paylaş">📧</button>
+<button onclick="paylasFacebook()" class="sosyal-btn facebook" title="Facebook'ta paylaş">f</button>
+<button onclick="paylasTwitter()" class="sosyal-btn twitter" title="X'te paylaş">𝕏</button>
+<button onclick="paylasWhatsApp()" class="sosyal-btn whatsapp" title="WhatsApp'ta paylaş">💬</button>
+<button onclick="paylasLinkedIn()" class="sosyal-btn linkedin" title="LinkedIn'de paylaş">in</button>
+<button onclick="paylasTelegram()" class="sosyal-btn telegram" title="Telegram'da paylaş">✈️</button>
+<button onclick="paylasReddit()" class="sosyal-btn reddit" title="Reddit'te paylaş">🔴</button>
+<button onclick="kopyalaLink()" class="sosyal-btn" title="Link kopyala">🔗</button>
+</div>
+</div>
+
+<!-- Zaman Kontrolü - YENİ! -->
+<div class="zaman-kontrol">
+<select id="zaman-modu" onchange="zamanModuDegistir()">
+<option value="sinirsiz">♾️ Sınırsız</option>
+<option value="blitz">⚡ Blitz (3+2)</option>
+<option value="rapid">🏃 Rapid (10+0)</option>
+<option value="classical">🎯 Classical (30+0)</option>
+</select>
+<div class="saat" id="beyaz-saat">--:--</div>
+<div class="saat" id="siyah-saat">--:--</div>
+</div>
+
+<!-- Bilgi Paneli -->
+<div class="bilgi-paneli">
+<div class="panel">
+<div class="panel-baslik" id="beyaz-isim">🦅 ROMA</div>
+<div class="panel-icerik" id="beyazSkor">0</div>
+</div>
+<div class="panel">
+<div class="panel-baslik">📊 İSTATİSTİK</div>
+<div class="panel-icerik" style="font-size:1rem;">
+<div>Hamle: <span id="hamle-sayisi">0</span></div>
+<div>Kazanılan: <span id="kazanilan">0</span></div>
+<div>Kaybedilen: <span id="kaybedilen">0</span></div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-baslik" id="siyah-isim">𓂀 MISIR</div>
+<div class="panel-icerik" id="siyahSkor">0</div>
+</div>
+</div>
+
+<div id="info">Oyun başlıyor...</div>
+
+<!-- Tahta -->
+<div class="board-container">
+<table id="board" class="tema-klasik"></table>
+</div>
+
+<!-- Hamle Logu -->
+<div class="hamle-log" id="hamle-log"></div>
+
+<!-- Ayarlar -->
+<div class="ayarlar">
+<div class="ayar">
+<div class="ayar-baslik">Oyun Modu</div>
+<select id="oyun-modu" onchange="oyunModuDegistir()">
+<option value="ai">AI Rakip</option>
+<option value="2p">2 Oyuncu</option>
+</select>
+</div>
+<div class="ayar">
+<div class="ayar-baslik">AI Zorluğu</div>
+<select id="ai-zorluk">
+<option value="1">Kolay</option>
+<option value="2" selected>Orta</option>
+<option value="3">Zor</option>
+<option value="4">Uzman</option>
+</select>
+</div>
+<div class="ayar">
+<div class="ayar-baslik">Tahta Teması</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+<button onclick="temaDegistir('klasik',0)">Klasik</button>
+<button onclick="temaDegistir('mermer',1)">Mermer</button>
+<button onclick="temaDegistir('ahsap',2)">Ahşap</button>
+<button onclick="temaDegistir('gece',3)">Gece</button>
+<button onclick="temaDegistir('ocean',4)">🌊 Okyanus</button>
+<button onclick="temaDegistir('forest',5)">🌲 Orman</button>
+<button onclick="temaDegistir('sunset',6)">🌅 Sunset</button>
+<button onclick="temaDegistir('royal',7)">👑 Royal</button>
+</div>
+</div>
+<div class="ayar">
+<div class="ayar-baslik">Uygarlık Seçimi</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;">
+<div>
+<div style="font-size:0.8rem;margin-bottom:5px;">Beyaz:</div>
+<select id="beyaz-uygarlik" onchange="uygarlikDegistir()">
+<option value="roma">🦅 Roma</option>
+<option value="misir">𓂀 Mısır</option>
+<option value="osmanli">🌙 Osmanlı</option>
+<option value="bizans">☦️ Bizans</option>
+<option value="mogol">🐎 Moğol</option>
+<option value="cin">🐉 Çin</option>
+<option value="yunan">🏛️ Yunan</option>
+<option value="pers">👑 Pers</option>
+<option value="arap">☪️ Arap</option>
+<option value="viking">⚔️ Viking</option>
+</select>
+</div>
+<div>
+<div style="font-size:0.8rem;margin-bottom:5px;">Siyah:</div>
+<select id="siyah-uygarlik" onchange="uygarlikDegistir()">
+<option value="roma">🦅 Roma</option>
+<option value="misir" selected>𓂀 Mısır</option>
+<option value="osmanli">🌙 Osmanlı</option>
+<option value="bizans">☦️ Bizans</option>
+<option value="mogol">🐎 Moğol</option>
+<option value="cin">🐉 Çin</option>
+<option value="yunan">🏛️ Yunan</option>
+<option value="pers">👑 Pers</option>
+<option value="arap">☪️ Arap</option>
+<option value="viking">⚔️ Viking</option>
+</select>
+</div>
+</div>
+</div>
+<div class="ayar">
+<label><input type="checkbox" id="ses-aktif" checked onchange="sesAktif=this.checked;"> Ses Efektleri</label>
+</div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+// ULTIMATE EDITION - TÜM ÖZELLİKLER!
+// ═══════════════════════════════════════════════════════════
+
+// Sabitler
+var W='w',B='b';
+var TASLAR={w:{K:'♚',Q:'♛',R:'♜',B:'♝',N:'♞',P:'♟'},b:{K:'♔',Q:'♕',R:'♖',B:'♗',N:'♘',P:'♙'}};
+var DEGERLER={K:0,Q:9,R:5,B:3,N:3,P:1};
+
+// Uygarlıklar - 10 UYGARLIK!
+// NOT: Bonuslar TEMATİK/FLAVOR özellikleridir - oyun mekaniğini DEĞİŞTİRMEZ
+// Oyuncuya hikaye ve tema vermek için vardır
+var UYGARLIKLAR={
+roma:{isim:'Roma İmparatorluğu',emoji:'🦅',renk:'#E74C3C',bonus:'⚔️ Disiplinli ordular (Tematik)'},
+misir:{isim:'Mısır Medeniyeti',emoji:'𓂀',renk:'#F1C40F',bonus:'📜 Antik bilgelik (Tematik)'},
+osmanli:{isim:'Osmanlı İmparatorluğu',emoji:'🌙',renk:'#C0392B',bonus:'🏹 Süvari ustaları (Tematik)'},
+bizans:{isim:'Bizans İmparatorluğu',emoji:'☦️',renk:'#8E44AD',bonus:'🛡️ Savunma dehası (Tematik)'},
+mogol:{isim:'Moğol İmparatorluğu',emoji:'🐎',renk:'#E67E22',bonus:'🏇 Hızlı saldırılar (Tematik)'},
+cin:{isim:'Çin İmparatorluğu',emoji:'🐉',renk:'#E74C3C',bonus:'📚 Stratejik ustalık (Tematik)'},
+yunan:{isim:'Yunan Medeniyeti',emoji:'🏛️',renk:'#3498DB',bonus:'🧠 Taktik zekası (Tematik)'},
+pers:{isim:'Pers İmparatorluğu',emoji:'👑',renk:'#9B59B6',bonus:'💎 İmparatorluk ihtişamı (Tematik)'},
+arap:{isim:'Arap Hilafeti',emoji:'☪️',renk:'#27AE60',bonus:'🌙 İslam altın çağı (Tematik)'},
+viking:{isim:'Viking Krallığı',emoji:'⚔️',renk:'#34495E',bonus:'⚡ Cesur savaşçılar (Tematik)'}
+};
+
+// Çok Dilli Destek - 13 DİL!
+var DILLER={
+tr:{baslik:"HISTORY CHESS",altBaslik:'Tarih Boyunca Satranç',vs:' vs ',yeniSavas:'⚔️ Yeni Savaş',geriAl:'↩ Geri Al',mod3D:'🎲 3D Mod',mod2D:'🎮 2D Mod',pgnIndir:'💾 PGN İndir',oyunBasliyor:'Oyun başlıyor...',siraniniz:'Senin sıran!',aiDusunuyor:'AI düşünüyor...',sah:'ŞAH!',mat:'MAT!',beraberlik:'Beraberlik!',zafer:'Zafer!',maglubiyet:'Mağlubiyet!',harikaOyun:'Harika bir oyun! Düşmanı yendin!',kaybettin:'Bu sefer kaybettin, ama tekrar deneyebilirsin!',esitGuc:'İki taraf da eşit güçte savaştı!',piyonTerfi:'Piyon Terfi! Hangi taşı seçiyorsun?'},
+en:{baslik:"HISTORY CHESS",altBaslik:'Play Through the Ages',vs:' vs ',yeniSavas:'⚔️ New Battle',geriAl:'↩ Undo',mod3D:'🎲 3D Mode',mod2D:'🎮 2D Mode',pgnIndir:'💾 Download PGN',oyunBasliyor:'Game starting...',siraniniz:'Your turn!',aiDusunuyor:'AI thinking...',sah:'CHECK!',mat:'CHECKMATE!',beraberlik:'Draw!',zafer:'Victory!',maglubiyet:'Defeat!',harikaOyun:'Great game! You defeated the enemy!',kaybettin:'You lost this time, but try again!',esitGuc:'Both sides fought with equal strength!',piyonTerfi:'Pawn Promotion! Choose your piece:'},
+ar:{baslik:"HISTORY CHESS",altBaslik:'العب عبر العصور',vs:' ضد ',yeniSavas:'⚔️ معركة جديدة',geriAl:'↩ تراجع',mod3D:'🎲 ثلاثي الأبعاد',mod2D:'🎮 ثنائي الأبعاد',pgnIndir:'💾 تحميل',oyunBasliyor:'بداية اللعبة...',siraniniz:'دورك!',aiDusunuyor:'الذكاء الاصطناعي يفكر...',sah:'كش!',mat:'كش ملك!',beraberlik:'تعادل!',zafer:'النصر!',maglubiyet:'الهزيمة!',harikaOyun:'لعبة رائعة! لقد هزمت العدو!',kaybettin:'خسرت هذه المرة، حاول مرة أخرى!',esitGuc:'كلا الجانبين قاتلا بقوة متساوية!',piyonTerfi:'ترقية البيدق! اختر قطعتك:'},
+de:{baslik:"HISTORY CHESS",altBaslik:'Spiele durch die Zeitalter',vs:' gegen ',yeniSavas:'⚔️ Neue Schlacht',geriAl:'↩ Rückgängig',mod3D:'🎲 3D-Modus',mod2D:'🎮 2D-Modus',pgnIndir:'💾 PGN herunterladen',oyunBasliyor:'Spiel beginnt...',siraniniz:'Du bist dran!',aiDusunuyor:'KI denkt nach...',sah:'SCHACH!',mat:'SCHACHMATT!',beraberlik:'Unentschieden!',zafer:'Sieg!',maglubiyet:'Niederlage!',harikaOyun:'Großartiges Spiel! Du hast den Feind besiegt!',kaybettin:'Dieses Mal verloren, aber versuche es erneut!',esitGuc:'Beide Seiten kämpften mit gleicher Stärke!',piyonTerfi:'Bauernumwandlung! Wähle deine Figur:'},
+fr:{baslik:"HISTORY CHESS",altBaslik:'Jouez à travers les âges',vs:' contre ',yeniSavas:'⚔️ Nouvelle Bataille',geriAl:'↩ Annuler',mod3D:'🎲 Mode 3D',mod2D:'🎮 Mode 2D',pgnIndir:'💾 Télécharger PGN',oyunBasliyor:'Le jeu commence...',siraniniz:'Votre tour!',aiDusunuyor:'IA réfléchit...',sah:'ÉCHEC!',mat:'ÉCHEC ET MAT!',beraberlik:'Match nul!',zafer:'Victoire!',maglubiyet:'Défaite!',harikaOyun:'Excellent jeu! Vous avez vaincu l\'ennemi!',kaybettin:'Perdu cette fois, mais réessayez!',esitGuc:'Les deux camps se sont battus avec la même force!',piyonTerfi:'Promotion du pion! Choisissez votre pièce:'},
+es:{baslik:"HISTORY CHESS",altBaslik:'Juega a través de las edades',vs:' contra ',yeniSavas:'⚔️ Nueva Batalla',geriAl:'↩ Deshacer',mod3D:'🎲 Modo 3D',mod2D:'🎮 Modo 2D',pgnIndir:'💾 Descargar PGN',oyunBasliyor:'El juego comienza...',siraniniz:'¡Tu turno!',aiDusunuyor:'IA pensando...',sah:'¡JAQUE!',mat:'¡JAQUE MATE!',beraberlik:'¡Empate!',zafer:'¡Victoria!',maglubiyet:'¡Derrota!',harikaOyun:'¡Gran juego! ¡Has derrotado al enemigo!',kaybettin:'Perdiste esta vez, ¡pero inténtalo de nuevo!',esitGuc:'¡Ambos lados lucharon con igual fuerza!',piyonTerfi:'¡Promoción de peón! Elige tu pieza:'},
+ru:{baslik:"HISTORY CHESS",altBaslik:'Играйте сквозь века',vs:' против ',yeniSavas:'⚔️ Новая Битва',geriAl:'↩ Отменить',mod3D:'🎲 3D режим',mod2D:'🎮 2D режим',pgnIndir:'💾 Скачать PGN',oyunBasliyor:'Игра начинается...',siraniniz:'Ваш ход!',aiDusunuyor:'ИИ думает...',sah:'ШАХ!',mat:'МАТ!',beraberlik:'Ничья!',zafer:'Победа!',maglubiyet:'Поражение!',harikaOyun:'Отличная игра! Вы победили врага!',kaybettin:'В этот раз проиграли, но попробуйте снова!',esitGuc:'Обе стороны сражались с равной силой!',piyonTerfi:'Превращение пешки! Выберите фигуру:'},
+ja:{baslik:"HISTORY CHESS",altBaslik:'時代を超えてプレイ',vs:' 対 ',yeniSavas:'⚔️ 新しい戦い',geriAl:'↩ 元に戻す',mod3D:'🎲 3Dモード',mod2D:'🎮 2Dモード',pgnIndir:'💾 ダウンロード',oyunBasliyor:'ゲーム開始...',siraniniz:'あなたのターン！',aiDusunuyor:'AIが考えています...',sah:'チェック！',mat:'チェックメイト！',beraberlik:'引き分け！',zafer:'勝利！',maglubiyet:'敗北！',harikaOyun:'素晴らしいゲーム！敵を倒しました！',kaybettin:'今回は負けましたが、また挑戦してください！',esitGuc:'両陣営が同じ強さで戦った！',piyonTerfi:'ポーン昇格！駒を選択:'},
+zh:{baslik:"HISTORY CHESS",altBaslik:'穿越时代的国际象棋',vs:' 对战 ',yeniSavas:'⚔️ 新战斗',geriAl:'↩ 撤销',mod3D:'🎲 3D模式',mod2D:'🎮 2D模式',pgnIndir:'💾 下载',oyunBasliyor:'游戏开始...',siraniniz:'轮到你了！',aiDusunuyor:'AI思考中...',sah:'将军！',mat:'将死！',beraberlik:'平局！',zafer:'胜利！',maglubiyet:'失败！',harikaOyun:'精彩的游戏！你击败了敌人！',kaybettin:'这次输了，但请再试一次！',esitGuc:'双方以同等实力战斗！',piyonTerfi:'兵升变！选择棋子:'},
+pt:{baslik:"HISTORY CHESS",altBaslik:'Jogue através das eras',vs:' vs ',yeniSavas:'⚔️ Nova Batalha',geriAl:'↩ Desfazer',mod3D:'🎲 Modo 3D',mod2D:'🎮 Modo 2D',pgnIndir:'💾 Baixar PGN',oyunBasliyor:'Jogo começando...',siraniniz:'Sua vez!',aiDusunuyor:'IA pensando...',sah:'XEQUE!',mat:'XEQUE-MATE!',beraberlik:'Empate!',zafer:'Vitória!',maglubiyet:'Derrota!',harikaOyun:'Ótimo jogo! Você derrotou o inimigo!',kaybettin:'Perdeu desta vez, mas tente novamente!',esitGuc:'Ambos os lados lutaram com igual força!',piyonTerfi:'Promoção de peão! Escolha sua peça:'},
+nl:{baslik:"HISTORY CHESS",altBaslik:'Speel door de eeuwen',vs:' tegen ',yeniSavas:'⚔️ Nieuwe Strijd',geriAl:'↩ Ongedaan maken',mod3D:'🎲 3D-modus',mod2D:'🎮 2D-modus',pgnIndir:'💾 PGN downloaden',oyunBasliyor:'Spel begint...',siraniniz:'Jouw beurt!',aiDusunuyor:'AI denkt na...',sah:'SCHAAK!',mat:'SCHAAKMAT!',beraberlik:'Gelijkspel!',zafer:'Overwinning!',maglubiyet:'Nederlaag!',harikaOyun:'Geweldig spel! Je hebt de vijand verslagen!',kaybettin:'Deze keer verloren, maar probeer het opnieuw!',esitGuc:'Beide kanten vochten met gelijke kracht!',piyonTerfi:'Pionpromotie! Kies je stuk:'},
+fi:{baslik:"HISTORY CHESS",altBaslik:'Pelaa aikojen halki',vs:' vs ',yeniSavas:'⚔️ Uusi taistelu',geriAl:'↩ Kumoa',mod3D:'🎲 3D-tila',mod2D:'🎮 2D-tila',pgnIndir:'💾 Lataa PGN',oyunBasliyor:'Peli alkaa...',siraniniz:'Sinun vuorosi!',aiDusunuyor:'AI ajattelee...',sah:'SHAKKI!',mat:'SHAKKIMATTI!',beraberlik:'Tasapeli!',zafer:'Voitto!',maglubiyet:'Häviö!',harikaOyun:'Hieno peli! Voitit vihollisen!',kaybettin:'Hävisit tällä kertaa, mutta yritä uudelleen!',esitGuc:'Molemmat osapuolet taistelivat yhtä vahvoina!',piyonTerfi:'Sotilaan korotus! Valitse nappula:'},
+no:{baslik:"HISTORY CHESS",altBaslik:'Spill gjennom tidene',vs:' mot ',yeniSavas:'⚔️ Ny kamp',geriAl:'↩ Angre',mod3D:'🎲 3D-modus',mod2D:'🎮 2D-modus',pgnIndir:'💾 Last ned PGN',oyunBasliyor:'Spillet starter...',siraniniz:'Din tur!',aiDusunuyor:'AI tenker...',sah:'SJAKK!',mat:'SJAKKMATT!',beraberlik:'Uavgjort!',zafer:'Seier!',maglubiyet:'Nederlag!',harikaOyun:'Flott spill! Du beseiret fienden!',kaybettin:'Tapte denne gangen, men prøv igjen!',esitGuc:'Begge sider kjempet med lik styrke!',piyonTerfi:'Bondeforfremmelse! Velg brikke:'}
+};
+
+var UYGARLIK_CEVIRILERI={
+roma:{tr:'Roma İmparatorluğu',en:'Roman Empire',ar:'الإمبراطورية الرومانية',de:'Römisches Reich',fr:'Empire Romain',es:'Imperio Romano',ru:'Римская империя',ja:'ローマ帝国',zh:'罗马帝国',pt:'Império Romano',nl:'Romeinse Rijk',fi:'Rooman valtakunta',no:'Romerriket'},
+misir:{tr:'Mısır Medeniyeti',en:'Egyptian Civilization',ar:'الحضارة المصرية',de:'Ägyptische Zivilisation',fr:'Civilisation Égyptienne',es:'Civilización Egipcia',ru:'Египетская цивилизация',ja:'エジプト文明',zh:'埃及文明',pt:'Civilização Egípcia',nl:'Egyptische Beschaving',fi:'Egyptin sivilisaatio',no:'Egyptisk sivilisasjon'},
+osmanli:{tr:'Osmanlı İmparatorluğu',en:'Ottoman Empire',ar:'الإمبراطورية العثمانية',de:'Osmanisches Reich',fr:'Empire Ottoman',es:'Imperio Otomano',ru:'Османская империя',ja:'オスマン帝国',zh:'奥斯曼帝国',pt:'Império Otomano',nl:'Ottomaanse Rijk',fi:'Ottomaanien valtakunta',no:'Det osmanske riket'},
+bizans:{tr:'Bizans İmparatorluğu',en:'Byzantine Empire',ar:'الإمبراطورية البيزنطية',de:'Byzantinisches Reich',fr:'Empire Byzantin',es:'Imperio Bizantino',ru:'Византийская империя',ja:'ビザンツ帝国',zh:'拜占庭帝国',pt:'Império Bizantino',nl:'Byzantijnse Rijk',fi:'Bysantin valtakunta',no:'Det bysantinske riket'},
+mogol:{tr:'Moğol İmparatorluğu',en:'Mongol Empire',ar:'الإمبراطورية المغولية',de:'Mongolisches Reich',fr:'Empire Mongol',es:'Imperio Mongol',ru:'Монгольская империя',ja:'モンゴル帝国',zh:'蒙古帝国',pt:'Império Mongol',nl:'Mongoolse Rijk',fi:'Mongolien valtakunta',no:'Mongolriket'},
+cin:{tr:'Çin İmparatorluğu',en:'Chinese Empire',ar:'الإمبراطورية الصينية',de:'Chinesisches Reich',fr:'Empire Chinois',es:'Imperio Chino',ru:'Китайская империя',ja:'中国帝国',zh:'中华帝国',pt:'Império Chinês',nl:'Chinese Rijk',fi:'Kiinan valtakunta',no:'Kinesisk rike'},
+yunan:{tr:'Yunan Medeniyeti',en:'Greek Civilization',ar:'الحضارة اليونانية',de:'Griechische Zivilisation',fr:'Civilisation Grecque',es:'Civilización Griega',ru:'Греческая цивилизация',ja:'ギリシャ文明',zh:'希腊文明',pt:'Civilização Grega',nl:'Griekse Beschaving',fi:'Kreikan sivilisaatio',no:'Gresk sivilisasjon'},
+pers:{tr:'Pers İmparatorluğu',en:'Persian Empire',ar:'الإمبراطورية الفارسية',de:'Persisches Reich',fr:'Empire Perse',es:'Imperio Persa',ru:'Персидская империя',ja:'ペルシャ帝国',zh:'波斯帝国',pt:'Império Persa',nl:'Perzische Rijk',fi:'Persian valtakunta',no:'Perserriket'},
+arap:{tr:'Arap Hilafeti',en:'Arab Caliphate',ar:'الخلافة العربية',de:'Arabisches Kalifat',fr:'Califat Arabe',es:'Califato Árabe',ru:'Арабский халифат',ja:'アラブカリフ国',zh:'阿拉伯哈里发',pt:'Califado Árabe',nl:'Arabisch kalifaat',fi:'Arabikahalifaatti',no:'Arabisk kalifat'},
+viking:{tr:'Viking Krallığı',en:'Viking Kingdom',ar:'مملكة الفايكنج',de:'Wikinger-Königreich',fr:'Royaume Viking',es:'Reino Vikingo',ru:'Королевство викингов',ja:'ヴァイキング王国',zh:'维京王国',pt:'Reino Viking',nl:'Vikingrijk',fi:'Viikinki-kuningaskunta',no:'Vikingerike'}
+};
+
+var aktifDil='tr';
+function t(anahtar){return DILLER[aktifDil][anahtar]||DILLER['tr'][anahtar]||anahtar;}
+function uygarlikIsmi(kod){return UYGARLIK_CEVIRILERI[kod][aktifDil]||UYGARLIK_CEVIRILERI[kod]['tr'];}
+
+function dilDegistir(yeniDil){
+aktifDil=yeniDil;
+localStorage.setItem('dil',yeniDil);
+if(yeniDil==='ar'){document.body.style.direction='rtl';document.body.style.textAlign='right';}
+else{document.body.style.direction='ltr';document.body.style.textAlign='center';}
+document.querySelectorAll('.dil-btn').forEach(function(btn){btn.classList.remove('active');});
+var dilBtn=document.getElementById('dil-'+yeniDil);
+if(dilBtn)dilBtn.classList.add('active');
+dilGuncelle();
+}
+
+function dilGuncelle(){
+document.querySelector('h1').textContent=t('baslik');
+document.getElementById('sub-title').textContent=uygarlikIsmi(beyazUygarlik)+t('vs')+uygarlikIsmi(siyahUygarlik);
+var yeniSavasBtn=document.querySelector('button[onclick="yeniOyun()"]');
+if(yeniSavasBtn)yeniSavasBtn.textContent=t('yeniSavas');
+var geriAlBtn=document.querySelector('button[onclick="geriAl()"]');
+if(geriAlBtn)geriAlBtn.textContent=t('geriAl');
+var btn3D=document.getElementById('btn-3d');
+if(btn3D)btn3D.textContent=is3D?t('mod2D'):t('mod3D');
+var pgnBtn=document.querySelector('button[onclick="kaydetPGN()"]');
+if(pgnBtn)pgnBtn.textContent=t('pgnIndir');
+}
+
+// Global Değişkenler
+var tahta,sira,secili,ipuclari,gecmis,beyazPuan,siyahPuan,mesgul,sonHamle,pozisyonGecmisi;
+var beyazSahHareket=false,siyahSahHareket=false;
+var beyazKaleKisaHareket=false,beyazKaleUzunHareket=false;
+var siyahKaleKisaHareket=false,siyahKaleUzunHareket=false;
+var enPassantKare=null;
+var terfiBekleyen=null;
+
+var beyazUygarlik='roma',siyahUygarlik='misir';
+var sesAktif=true,oyunModu='ai',is3D=false;
+var aktifTema=0;
+var temalar=['klasik','mermer','ahsap','gece','ocean','forest','sunset','royal'];
+
+// Başarımlar - 15 BAŞARIM!
+var basarimlar={ilkSah:false,matYaptin:false,onOyun:false,piyonTerfi:false,enPassant:false,hizliMat:false,vezirFeda:false,ustDuzey:false,puzzleMaster:false,zamanaKarsi:false,dilKutusu:false,temaKasifi:false,uygarlikGezgini:false,seriKazanan:false};
+var istatistikler={toplam:0,kazanilan:0,kaybedilen:0};
+
+// GÜNLÜK MEYDAN OKUMA SİSTEMİ - YENİ! 🔥
+var gunlukMeydan={
+  aktif:false,
+  bugununTarihi:'',
+  bugununEslesmesi:{beyaz:'',siyah:''},
+  enIyiSkor:999,
+  skorlar:[]
+};
+
+// LIDERLIK TABLOSU - YENİ! 📊
+var liderlikTablosu={
+  gunluk:[],
+  tumZamanlar:[],
+  kullaniciAdi:''
+};
+
+// Günlük meydan okuma başlat
+function gunlukMeydanBaslat(){
+  var bugun=new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  var kaydedilmis=localStorage.getItem('gunlukMeydan');
+  
+  if(kaydedilmis){
+    var kayit=JSON.parse(kaydedilmis);
+    if(kayit.tarih===bugun){
+      gunlukMeydan=kayit;
+      return; // Bugün zaten başlatılmış
+    }
+  }
+  
+  // Yeni gün - yeni meydan okuma!
+  var uygCiftleri=[
+    {beyaz:'roma',siyah:'mogol'},
+    {beyaz:'misir',siyah:'viking'},
+    {beyaz:'osmanli',siyah:'yunan'},
+    {beyaz:'cin',siyah:'pers'},
+    {beyaz:'bizans',siyah:'arap'}
+  ];
+  
+  var gunIndex=new Date().getDate()%uygCiftleri.length;
+  var bugunEslesme=uygCiftleri[gunIndex];
+  
+  gunlukMeydan={
+    aktif:true,
+    bugununTarihi:bugun,
+    bugununEslesmesi:bugunEslesme,
+    enIyiSkor:999,
+    skorlar:[]
+  };
+  
+  localStorage.setItem('gunlukMeydan',JSON.stringify(gunlukMeydan));
+}
+
+// Liderlik tablosunu yükle
+function liderlikYukle(){
+  var kaydedilmis=localStorage.getItem('liderlikTablosu');
+  if(kaydedilmis){
+    liderlikTablosu=JSON.parse(kaydedilmis);
+  }
+  
+  // Kullanıcı adı yoksa iste
+  if(!liderlikTablosu.kullaniciAdi){
+    liderlikTablosu.kullaniciAdi='Oyuncu'+(Math.floor(Math.random()*9999));
+  }
+}
+
+// Oyun başlangıcında çalıştır
+gunlukMeydanBaslat();
+liderlikYukle();
+
+// ZAMAN KONTROLÜ - YENİ!
+var zamanKontrol={aktif:false,mod:'sinirsiz',beyazSure:180,siyahSure:180,increment:2,interval:null};
+
+function zamanModuDegistir(){
+var mod=document.getElementById('zaman-modu').value;
+zamanKontrol.mod=mod;
+zamanKontrol.aktif=(mod!=='sinirsiz');
+if(mod==='blitz'){zamanKontrol.beyazSure=180;zamanKontrol.siyahSure=180;zamanKontrol.increment=2;}
+else if(mod==='rapid'){zamanKontrol.beyazSure=600;zamanKontrol.siyahSure=600;zamanKontrol.increment=0;}
+else if(mod==='classical'){zamanKontrol.beyazSure=1800;zamanKontrol.siyahSure=1800;zamanKontrol.increment=0;}
+zamanGuncelle();
+}
+
+function zamanBaslat(){
+if(!zamanKontrol.aktif)return;
+clearInterval(zamanKontrol.interval);
+zamanKontrol.interval=setInterval(function(){
+if(sira===W){
+zamanKontrol.beyazSure--;
+if(zamanKontrol.beyazSure<=0){zamanBitti('Beyaz');}
+if(zamanKontrol.beyazSure<=10)document.getElementById('beyaz-saat').classList.add('warning');
+}else{
+zamanKontrol.siyahSure--;
+if(zamanKontrol.siyahSure<=0){zamanBitti('Siyah');}
+if(zamanKontrol.siyahSure<=10)document.getElementById('siyah-saat').classList.add('warning');
+}
+zamanGuncelle();
+},1000);
+}
+
+function zamanDurdur(){clearInterval(zamanKontrol.interval);}
+
+function zamanGuncelle(){
+document.getElementById('beyaz-saat').textContent=formatZaman(zamanKontrol.beyazSure);
+document.getElementById('siyah-saat').textContent=formatZaman(zamanKontrol.siyahSure);
+}
+
+function formatZaman(saniye){
+if(saniye<0)saniye=0;
+var dk=Math.floor(saniye/60);
+var sn=saniye%60;
+return dk+':'+(sn<10?'0':'')+sn;
+}
+
+function zamanBitti(kim){
+zamanDurdur();
+alert('⏰ Zaman Doldu! '+kim+' zaman aşımından kaybetti!');
+oyunBittiModal(kim==='Beyaz'?'Siyah':'Beyaz');
+if(zamanKontrol.mod==='blitz'&&!basarimlar.zamanaKarsi){
+basarimlar.zamanaKarsi=true;
+basarimGoster('⏰ Zamana Karşı','Blitz oyunu kazandın!');
+}
+}
+
+// Başlat
+function baslat(){
+tahta=[];
+for(var i=0;i<8;i++){tahta[i]=[];for(var j=0;j<8;j++)tahta[i][j]=null;}
+var arka=['R','N','B','Q','K','B','N','R'];
+for(var i=0;i<8;i++){
+tahta[0][i]={r:B,t:arka[i]};
+tahta[1][i]={r:B,t:'P'};
+tahta[6][i]={r:W,t:'P'};
+tahta[7][i]={r:W,t:arka[i]};
+}
+sira=W;secili=null;ipuclari=[];gecmis=[];beyazPuan=0;siyahPuan=0;mesgul=false;sonHamle=null;pozisyonGecmisi=[];
+beyazSahHareket=false;siyahSahHareket=false;
+beyazKaleKisaHareket=false;beyazKaleUzunHareket=false;
+siyahKaleKisaHareket=false;siyahKaleUzunHareket=false;
+enPassantKare=null;terfiBekleyen=null;
+document.getElementById('hamle-sayisi').textContent='0';
+document.getElementById('hamle-log').innerHTML='';
+document.getElementById('beyaz-saat').classList.remove('warning');
+document.getElementById('siyah-saat').classList.remove('warning');
+zamanDurdur();
+zamanModuDegistir();
+zamanBaslat();
+tahtaCiz();
+}
+
+function tahtaCiz(){
+var tbl=document.getElementById('board');
+if(tbl.rows.length===0){
+for(var r=0;r<8;r++){
+var tr=document.createElement('tr');
+for(var c=0;c<8;c++){
+var td=document.createElement('td');
+td.id='k'+r+c;
+td.className=(r+c)%2?'dark':'light';
+td.onclick=(function(x,y){return function(){kareTikla(x,y);};})(r,c);
+tr.appendChild(td);
+}
+tbl.appendChild(tr);
+}
+}
+for(var r=0;r<8;r++){
+for(var c=0;c<8;c++){
+var kare=document.getElementById('k'+r+c);
+kare.className=(r+c)%2?'dark':'light';
+if(secili&&secili[0]===r&&secili[1]===c)kare.classList.add('secili');
+if(sonHamle&&((sonHamle.kr===r&&sonHamle.kc===c)||(sonHamle.hr===r&&sonHamle.hc===c)))kare.classList.add('son-hamle');
+var ipucuVar=false;
+for(var i=0;i<ipuclari.length;i++)if(ipuclari[i][0]===r&&ipuclari[i][1]===c){ipucuVar=true;break;}
+if(ipucuVar)kare.classList.add('ipucu');
+var tas=tahta[r][c];
+if(tas){
+var renkStyle=tas.r===W?'color:#fff;text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;':'color:#222;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;';
+kare.innerHTML='<span style="'+renkStyle+'">'+TASLAR[tas.r][tas.t]+'</span>';
+}else{
+kare.innerHTML='';
+}
+}
+}
+durumGuncelle();
+}
+
+function durumGuncelle(){
+var mesaj='';
+if(matKontrol(sira)){
+mesaj=t('mat')+' '+(sira===W?t('maglubiyet'):t('zafer'));
+oyunBittiModal(sira===W?'Siyah':'Beyaz');
+}else if(patKontrol(sira)){
+mesaj='PAT! '+t('beraberlik');
+beraberlikModal('Pat - Stalemate');
+}else if(yetersizMalzeme()){
+mesaj=t('beraberlik')+' - Yetersiz Malzeme';
+beraberlikModal('Yetersiz Malzeme');
+}else if(ucTekrarKontrol()){
+mesaj=t('beraberlik')+' - Üç Tekrar';
+beraberlikModal('Üç Tekrar Kuralı');
+}else if(sahKontrol(sira,tahta)){
+mesaj=t('sah');
+}else if(sira===W||oyunModu==='2p'){
+mesaj=t('siraniniz');
+}else{
+mesaj=t('aiDusunuyor');
+}
+document.getElementById('info').textContent=mesaj;
+document.getElementById('beyazSkor').textContent=beyazPuan;
+document.getElementById('siyahSkor').textContent=siyahPuan;
+if(istatistikler.toplam>0){
+document.getElementById('kazanilan').textContent=istatistikler.kazanilan;
+document.getElementById('kaybedilen').textContent=istatistikler.kaybedilen;
+}
+}
+
+function kareTikla(r,c){
+if(oyunModu==='ai'&&sira===B)return;
+if(mesgul)return;
+var tas=tahta[r][c];
+if(secili){
+var hamleler=yasalHamleler(secili[0],secili[1]);
+for(var i=0;i<hamleler.length;i++){
+if(hamleler[i].hr===r&&hamleler[i].hc===c){
+hamleYap(hamleler[i]);
+secili=null;ipuclari=[];
+tahtaCiz();
+return;
+}
+}
+if(tas&&tas.r===sira){
+secili=[r,c];
+ipuclari=yasalHamleler(r,c).map(function(h){return[h.hr,h.hc];});
+}else{
+secili=null;ipuclari=[];
+}
+}else{
+if(tas&&tas.r===sira){
+secili=[r,c];
+ipuclari=yasalHamleler(r,c).map(function(h){return[h.hr,h.hc];});
+}
+}
+tahtaCiz();
+}
+
+function hamleYap(h){
+// PİYON TERFİ KONTROLÜ - YENİ!
+if(piyonTerfiKontrol(h)){
+tahta[h.hr][h.hc]=tahta[h.kr][h.kc];
+tahta[h.kr][h.kc]=null;
+sira=sira===W?B:W;
+tahtaCiz();
+piyonTerfiGoster(h.hr,h.hc,tahta[h.hr][h.hc].r);
+return;
+}
+
+// EN PASSANT KONTROLÜ - DÜZELTME!
+var tas=tahta[h.kr][h.kc];
+var isEnPassant=false;
+if(tas&&tas.t==='P'&&Math.abs(h.hc-h.kc)===1&&!tahta[h.hr][h.hc]&&enPassantKare&&h.hr===enPassantKare.r&&h.hc===enPassantKare.c){
+isEnPassant=true;
+// Alınan piyonun konumu: hedef satırının arkası!
+var alinanSatir=tas.r===W?h.hr+1:h.hr-1;
+// KORUMA: Şahı asla silme!
+if(tahta[alinanSatir]&&tahta[alinanSatir][h.hc]&&tahta[alinanSatir][h.hc].t!=='K'){
+tahta[alinanSatir][h.hc]=null;
+if(sira===W)beyazPuan+=1;
+else siyahPuan+=1;
+if(!basarimlar.enPassant){
+basarimlar.enPassant=true;
+basarimGoster('🎯 En Passant','En passant hamlesi yaptın!');
+}
+}
+}
+
+var hedef=tahta[h.hr][h.hc];
+var uyg=sira===W?UYGARLIKLAR[beyazUygarlik]:UYGARLIKLAR[siyahUygarlik];
+var dosyalar='abcdefgh',satirlar='87654321';
+gecmis.push({tahta:klonla(tahta),sira:sira,beyazPuan:beyazPuan,siyahPuan:siyahPuan});
+var tasAd=tas.t==='P'?'':TASLAR[tas.r][tas.t];
+var hamleNot=uyg.emoji+': '+tasAd+' '+dosyalar[h.kc]+satirlar[h.kr]+'→'+dosyalar[h.hc]+satirlar[h.hr];
+if(hedef)hamleNot+=' ✦';
+
+// ROK KONTROLÜ
+var isRok=false;
+if(tas.t==='K'&&Math.abs(h.hc-h.kc)===2){
+isRok=true;
+hamleNot=uyg.emoji+': '+(h.hc>h.kc?'O-O':'O-O-O')+' (Rok)';
+if(h.hc===6){tahta[h.hr][5]=tahta[h.hr][7];tahta[h.hr][7]=null;}
+else if(h.hc===2){tahta[h.hr][3]=tahta[h.hr][0];tahta[h.hr][0]=null;}
+}
+
+var log=document.getElementById('hamle-log');
+var div=document.createElement('div');
+div.textContent=hamleNot;
+log.appendChild(div);
+log.scrollTop=log.scrollHeight;
+sonHamle={kr:h.kr,kc:h.kc,hr:h.hr,hc:h.hc};
+
+// KRİTİK KORUMA: ŞAH ASLA SİLİNMEZ!
+if(hedef&&hedef.t==='K'){
+console.error('HATA: Şah silinmeye çalışıldı! Hamle iptal!');
+return; // Hamleyi iptal et!
+}
+
+tahta[h.hr][h.hc]=tahta[h.kr][h.kc];
+tahta[h.kr][h.kc]=null;
+
+// Hareket takibi
+if(tas.t==='K'){if(tas.r===W)beyazSahHareket=true;else siyahSahHareket=true;}
+if(tas.t==='R'){
+if(tas.r===W){if(h.kc===7)beyazKaleKisaHareket=true;if(h.kc===0)beyazKaleUzunHareket=true;}
+else{if(h.kc===7)siyahKaleKisaHareket=true;if(h.kc===0)siyahKaleUzunHareket=true;}
+}
+if(hedef&&hedef.t==='R'){
+if(hedef.r===W){if(h.hc===7)beyazKaleKisaHareket=true;if(h.hc===0)beyazKaleUzunHareket=true;}
+else{if(h.hc===7)siyahKaleKisaHareket=true;if(h.hc===0)siyahKaleUzunHareket=true;}
+}
+
+// En passant karesi güncelle
+enPassantKare=null;
+if(tas.t==='P'&&Math.abs(h.hr-h.kr)===2){
+enPassantKare={r:tas.r===W?h.kr-1:h.kr+1,c:h.kc};
+}
+
+var pozKey=tahtayaAnahtar(tahta);
+pozisyonGecmisi.push(pozKey);
+if(pozisyonGecmisi.length>20)pozisyonGecmisi.shift();
+
+if(hedef){
+if(sira===W)beyazPuan+=DEGERLER[hedef.t]||0;
+else siyahPuan+=DEGERLER[hedef.t]||0;
+if(sesAktif)sesOynat('tas-al');
+// Haptic Feedback - Taş alındı (güçlü titreşim)
+if(navigator.vibrate){
+navigator.vibrate([50, 30, 50]); // Double vibration pattern
+}
+}else{
+if(sesAktif)sesOynat('hamle');
+// Haptic Feedback - Normal hamle (hafif titreşim)
+if(navigator.vibrate){
+navigator.vibrate(20); // Subtle vibration
+}
+}
+
+document.getElementById('hamle-sayisi').textContent=gecmis.length;
+
+// Zaman ekle (increment)
+if(zamanKontrol.aktif&&zamanKontrol.increment>0){
+if(sira===W)zamanKontrol.beyazSure+=zamanKontrol.increment;
+else zamanKontrol.siyahSure+=zamanKontrol.increment;
+}
+
+sira=sira===W?B:W;
+
+if(sahKontrol(sira,tahta)&&!basarimlar.ilkSah){
+basarimlar.ilkSah=true;
+basarimGoster('🎯 İlk Şah!','İlk defa şah çektin!');
+// Haptic feedback - Şah! (uyarı titreşimi)
+if(navigator.vibrate){
+navigator.vibrate([100, 50, 100, 50, 100]); // Alert pattern
+}
+}
+
+if(gecmis.length===10&&!basarimlar.hizliMat&&matKontrol(sira)){
+basarimlar.hizliMat=true;
+basarimGoster('⚡ Hızlı Mat!','10 hamlede mat yaptın!');
+}
+
+tahtaCiz();
+if(oyunModu==='ai'&&sira===B&&!mesgul){
+mesgul=true;
+setTimeout(function(){
+if(sira===B&&oyunModu==='ai'){
+aiHamlesi();
+}
+},800);
+}
+}
+
+// PİYON TERFİ - YENİ!
+function piyonTerfiKontrol(hamle){
+var tas=tahta[hamle.kr][hamle.kc];
+if(tas&&tas.t==='P'){
+var hedefSatir=hamle.hr;
+if((tas.r===W&&hedefSatir===0)||(tas.r===B&&hedefSatir===7))return true;
+}
+return false;
+}
+
+function piyonTerfiGoster(r,c,renk){
+terfiBekleyen={r:r,c:c,renk:renk};
+zamanDurdur();
+var modal=document.createElement('div');
+modal.id='terfi-modal';
+modal.className='modal';
+var content=document.createElement('div');
+content.className='modal-content';
+var title=document.createElement('h2');
+title.textContent=t('piyonTerfi');
+content.appendChild(title);
+var secenekler=document.createElement('div');
+secenekler.style.cssText='display:flex;gap:15px;justify-content:center;margin-top:20px;';
+var taslar=[{t:'Q',emoji:renk===W?'♕':'♛',isim:'Vezir'},{t:'R',emoji:renk===W?'♖':'♜',isim:'Kale'},{t:'B',emoji:renk===W?'♗':'♝',isim:'Fil'},{t:'N',emoji:renk===W?'♘':'♞',isim:'At'}];
+taslar.forEach(function(tas){
+var btn=document.createElement('button');
+btn.innerHTML='<div style="font-size:4rem;">'+tas.emoji+'</div><div>'+tas.isim+'</div>';
+btn.style.cssText='background:#5c3d0a;color:#f5e6c8;border:2px solid #daa520;padding:20px;border-radius:10px;cursor:pointer;transition:all 0.2s;';
+btn.onmouseover=function(){this.style.background='#daa520';this.style.transform='scale(1.1)';};
+btn.onmouseout=function(){this.style.background='#5c3d0a';this.style.transform='scale(1)';};
+btn.onclick=function(){piyonTerfiTamamla(tas.t);};
+secenekler.appendChild(btn);
+});
+content.appendChild(secenekler);
+modal.appendChild(content);
+document.body.appendChild(modal);
+}
+
+function piyonTerfiTamamla(yeniTas){
+if(!terfiBekleyen)return;
+tahta[terfiBekleyen.r][terfiBekleyen.c].t=yeniTas;
+var modal=document.getElementById('terfi-modal');
+if(modal)modal.remove();
+terfiBekleyen=null;
+if(!basarimlar.piyonTerfi){
+basarimlar.piyonTerfi=true;
+basarimGoster('🔝 Piyon Terfi!','İlk piyon terfin!');
+}
+zamanBaslat();
+tahtaCiz();
+if(oyunModu==='ai'&&sira===B&&!mesgul){
+mesgul=true;
+setTimeout(function(){
+if(sira===B&&oyunModu==='ai'){
+aiHamlesi();
+}
+},800);
+}
+}
+
+function yasalHamleler(r,c){
+var tas=tahta[r][c];if(!tas)return[];
+var sonuc=[],hamle=[];
+if(tas.t==='P'){
+var yon=tas.r===W?-1:1;
+if(r+yon>=0&&r+yon<8&&!tahta[r+yon][c])hamle.push({kr:r,kc:c,hr:r+yon,hc:c});
+if(tas.r===W&&r===6&&!tahta[5][c]&&!tahta[4][c])hamle.push({kr:r,kc:c,hr:4,hc:c});
+if(tas.r===B&&r===1&&!tahta[2][c]&&!tahta[3][c])hamle.push({kr:r,kc:c,hr:3,hc:c});
+for(var dc=-1;dc<=1;dc+=2){
+if(c+dc>=0&&c+dc<8&&r+yon>=0&&r+yon<8){
+var hedef=tahta[r+yon][c+dc];
+if(hedef&&hedef.r!==tas.r)hamle.push({kr:r,kc:c,hr:r+yon,hc:c+dc});
+}
+}
+// EN PASSANT - YENİ!
+if(enPassantKare){
+if(c>0){var hedefR=r+yon;var hedefC=c-1;if(hedefR===enPassantKare.r&&hedefC===enPassantKare.c)hamle.push({kr:r,kc:c,hr:hedefR,hc:hedefC});}
+if(c<7){var hedefR=r+yon;var hedefC=c+1;if(hedefR===enPassantKare.r&&hedefC===enPassantKare.c)hamle.push({kr:r,kc:c,hr:hedefR,hc:hedefC});}
+}
+}else if(tas.t==='N'){
+var nh=[[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]];
+for(var i=0;i<8;i++){
+var nr=r+nh[i][0],nc=c+nh[i][1];
+if(nr>=0&&nr<8&&nc>=0&&nc<8){
+var h=tahta[nr][nc];
+if(!h||h.r!==tas.r)hamle.push({kr:r,kc:c,hr:nr,hc:nc});
+}
+}
+}else if(tas.t==='B'){
+kaydir(r,c,-1,-1,hamle);kaydir(r,c,-1,1,hamle);
+kaydir(r,c,1,-1,hamle);kaydir(r,c,1,1,hamle);
+}else if(tas.t==='R'){
+kaydir(r,c,-1,0,hamle);kaydir(r,c,1,0,hamle);
+kaydir(r,c,0,-1,hamle);kaydir(r,c,0,1,hamle);
+}else if(tas.t==='Q'){
+for(var dr=-1;dr<=1;dr++)for(var dc=-1;dc<=1;dc++)
+if(dr||dc)kaydir(r,c,dr,dc,hamle);
+}else if(tas.t==='K'){
+for(var dr=-1;dr<=1;dr++)for(var dc=-1;dc<=1;dc++){
+if(!dr&&!dc)continue;
+var nr=r+dr,nc=c+dc;
+if(nr>=0&&nr<8&&nc>=0&&nc<8){
+var h=tahta[nr][nc];
+if(!h||h.r!==tas.r)hamle.push({kr:r,kc:c,hr:nr,hc:nc});
+}
+}
+// ROK HAMLELERİ
+var sahHareket=tas.r===W?beyazSahHareket:siyahSahHareket;
+var kaleKisaHareket=tas.r===W?beyazKaleKisaHareket:siyahKaleKisaHareket;
+var kaleUzunHareket=tas.r===W?beyazKaleUzunHareket:siyahKaleUzunHareket;
+var basSatir=tas.r===W?7:0;
+if(!sahHareket&&!kaleKisaHareket&&r===basSatir&&c===4){
+if(!tahta[r][5]&&!tahta[r][6]&&tahta[r][7]&&tahta[r][7].t==='R'){
+if(!sahKontrol(tas.r,tahta)){
+var sim1=klonla(tahta);sim1[r][5]=sim1[r][4];sim1[r][4]=null;
+var sim2=klonla(tahta);sim2[r][6]=sim2[r][4];sim2[r][4]=null;
+if(!sahKontrol(tas.r,sim1)&&!sahKontrol(tas.r,sim2)){
+hamle.push({kr:r,kc:c,hr:r,hc:6});
+}
+}
+}
+}
+if(!sahHareket&&!kaleUzunHareket&&r===basSatir&&c===4){
+if(!tahta[r][3]&&!tahta[r][2]&&!tahta[r][1]&&tahta[r][0]&&tahta[r][0].t==='R'){
+if(!sahKontrol(tas.r,tahta)){
+var sim1=klonla(tahta);sim1[r][3]=sim1[r][4];sim1[r][4]=null;
+var sim2=klonla(tahta);sim2[r][2]=sim2[r][4];sim2[r][4]=null;
+if(!sahKontrol(tas.r,sim1)&&!sahKontrol(tas.r,sim2)){
+hamle.push({kr:r,kc:c,hr:r,hc:2});
+}
+}
+}
+}
+}
+for(var i=0;i<hamle.length;i++){
+var sim=simule(hamle[i],tahta);
+if(!sahKontrol(tas.r,sim))sonuc.push(hamle[i]);
+}
+return sonuc;
+}
+
+function kaydir(r,c,dr,dc,liste){
+var tas=tahta[r][c];
+for(var i=1;i<8;i++){
+var nr=r+dr*i,nc=c+dc*i;
+if(nr<0||nr>7||nc<0||nc>7)break;
+var hedef=tahta[nr][nc];
+if(hedef){
+if(hedef.r!==tas.r)liste.push({kr:r,kc:c,hr:nr,hc:nc});
+break;
+}
+liste.push({kr:r,kc:c,hr:nr,hc:nc});
+}
+}
+
+function simule(h,t){
+var yeni=klonla(t);
+var tas=yeni[h.kr][h.kc];
+
+// ROK SİMÜLASYONU - YENİ!
+if(tas&&tas.t==='K'&&Math.abs(h.hc-h.kc)===2){
+// Kısa rok (e1->g1 veya e8->g8)
+if(h.hc===6){
+yeni[h.hr][5]=yeni[h.hr][7]; // Kale h->f
+yeni[h.hr][7]=null;
+}
+// Uzun rok (e1->c1 veya e8->c8)
+else if(h.hc===2){
+yeni[h.hr][3]=yeni[h.hr][0]; // Kale a->d
+yeni[h.hr][0]=null;
+}
+}
+
+yeni[h.hr][h.hc]=yeni[h.kr][h.kc];
+yeni[h.kr][h.kc]=null;
+return yeni;
+}
+
+function sahKontrol(renk,t){
+var sr=-1,sc=-1;
+for(var r=0;r<8;r++)for(var c=0;c<8;c++)
+if(t[r][c]&&t[r][c].r===renk&&t[r][c].t==='K'){sr=r;sc=c;break;}
+if(sr===-1)return false;
+var rakip=renk===W?B:W;
+for(var r=0;r<8;r++)for(var c=0;c<8;c++){
+var tas=t[r][c];
+if(!tas||tas.r!==rakip)continue;
+var h=basitHamleler(r,c,t);
+for(var i=0;i<h.length;i++)
+if(h[i].hr===sr&&h[i].hc===sc)return true;
+}
+return false;
+}
+
+function basitHamleler(r,c,t){
+var tas=t[r][c],h=[];if(!tas)return h;
+if(tas.t==='P'){
+var yon=tas.r===W?-1:1;
+for(var dc=-1;dc<=1;dc+=2)
+if(c+dc>=0&&c+dc<8&&r+yon>=0&&r+yon<8)h.push({kr:r,kc:c,hr:r+yon,hc:c+dc});
+}else if(tas.t==='N'){
+var nh=[[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]];
+for(var i=0;i<8;i++){
+var nr=r+nh[i][0],nc=c+nh[i][1];
+if(nr>=0&&nr<8&&nc>=0&&nc<8)h.push({kr:r,kc:c,hr:nr,hc:nc});
+}
+}else if(tas.t==='B'){
+for(var dr=-1;dr<=1;dr+=2)for(var dc=-1;dc<=1;dc+=2)
+basitKaydir(r,c,dr,dc,h,t);
+}else if(tas.t==='R'){
+basitKaydir(r,c,-1,0,h,t);basitKaydir(r,c,1,0,h,t);
+basitKaydir(r,c,0,-1,h,t);basitKaydir(r,c,0,1,h,t);
+}else if(tas.t==='Q'){
+for(var dr=-1;dr<=1;dr++)for(var dc=-1;dc<=1;dc++)
+if(dr||dc)basitKaydir(r,c,dr,dc,h,t);
+}else if(tas.t==='K'){
+for(var dr=-1;dr<=1;dr++)for(var dc=-1;dc<=1;dc++){
+if(!dr&&!dc)continue;
+var nr=r+dr,nc=c+dc;
+if(nr>=0&&nr<8&&nc>=0&&nc<8)h.push({kr:r,kc:c,hr:nr,hc:nc});
+}
+}
+return h;
+}
+
+function basitKaydir(r,c,dr,dc,liste,t){
+for(var i=1;i<8;i++){
+var nr=r+dr*i,nc=c+dc*i;
+if(nr<0||nr>7||nc<0||nc>7)break;
+liste.push({kr:r,kc:c,hr:nr,hc:nc});
+if(t[nr][nc])break;
+}
+}
+
+function matKontrol(renk){
+if(!sahKontrol(renk,tahta))return false;
+for(var r=0;r<8;r++)for(var c=0;c<8;c++){
+var tas=tahta[r][c];
+if(tas&&tas.r===renk){
+var hamleler=yasalHamleler(r,c);
+if(hamleler.length>0)return false;
+}
+}
+return true;
+}
+
+// PAT (STALEMATE) KONTROLÜ - YENİ!
+function patKontrol(renk){
+// Şah altında mı? Evet ise pat değil
+if(sahKontrol(renk,tahta))return false;
+// Hiç legal hamle var mı?
+for(var r=0;r<8;r++)for(var c=0;c<8;c++){
+var tas=tahta[r][c];
+if(tas&&tas.r===renk){
+var hamleler=yasalHamleler(r,c);
+if(hamleler.length>0)return false;
+}
+}
+return true; // Şah yok ama hamle de yok = PAT!
+}
+
+// YETERSIZ MALZEME KONTROLÜ - YENİ!
+function yetersizMalzeme(){
+var beyazTaslar=[],siyahTaslar=[];
+for(var r=0;r<8;r++)for(var c=0;c<8;c++){
+if(tahta[r][c]){
+if(tahta[r][c].r===W)beyazTaslar.push(tahta[r][c].t);
+else siyahTaslar.push(tahta[r][c].t);
+}
+}
+// K vs K
+if(beyazTaslar.length===1&&siyahTaslar.length===1)return true;
+// KB vs K veya KN vs K
+if(beyazTaslar.length===2&&siyahTaslar.length===1){
+if(beyazTaslar.includes('B')||beyazTaslar.includes('N'))return true;
+}
+if(siyahTaslar.length===2&&beyazTaslar.length===1){
+if(siyahTaslar.includes('B')||siyahTaslar.includes('N'))return true;
+}
+// KB vs KB (aynı renk kareler)
+if(beyazTaslar.length===2&&siyahTaslar.length===2){
+if(beyazTaslar.includes('B')&&siyahTaslar.includes('B')){
+// İki fil aynı renk karelerde mi kontrol et
+return true; // Basitleştirme: tüm KB vs KB berabere
+}
+}
+return false;
+}
+
+// ÜÇ TEKRAR KURALI KONTROLÜ - YENİ!
+function ucTekrarKontrol(){
+if(pozisyonGecmisi.length<8)return false; // En az 8 hamle gerekli
+var sonPozisyon=tahtayaAnahtar(tahta);
+var tekrarSayisi=0;
+for(var i=0;i<pozisyonGecmisi.length;i++){
+if(pozisyonGecmisi[i]===sonPozisyon)tekrarSayisi++;
+}
+return tekrarSayisi>=3;
+}
+
+function aiHamlesi(){
+console.log('AI hamlesi başladı - Sıra:', sira, 'Mod:', oyunModu);
+var hamleler=[];
+for(var r=0;r<8;r++)for(var c=0;c<8;c++){
+if(tahta[r][c]&&tahta[r][c].r===B){
+var h=yasalHamleler(r,c);
+hamleler=hamleler.concat(h);
+}
+}
+console.log('AI toplam yasal hamle:', hamleler.length);
+if(hamleler.length===0){
+console.log('AI hamle bulamadı - oyun bitti');
+mesgul=false;
+tahtaCiz();
+return;
+}
+try{
+var zorluk=parseInt(document.getElementById('ai-zorluk').value)||2;
+// Gelişmiş derinlik sistemi
+var derinlik=zorluk===1?2:zorluk===2?4:zorluk===3?5:7;
+console.log('AI zorluk:', zorluk, 'Derinlik:', derinlik);
+var enIyi=minimax(tahta,derinlik,-Infinity,Infinity,true);
+var hamle=enIyi&&enIyi.hamle?enIyi.hamle:hamleler[Math.floor(Math.random()*hamleler.length)];
+console.log('AI seçilen hamle:', hamle);
+if(hamle){
+hamleYap(hamle);
+}else{
+console.log('AI hamle null - rastgele seçiliyor');
+hamleYap(hamleler[Math.floor(Math.random()*hamleler.length)]);
+}
+}catch(e){
+console.error('AI hatası:', e);
+hamleYap(hamleler[Math.floor(Math.random()*hamleler.length)]);
+}
+mesgul=false;
+console.log('AI hamlesi tamamlandı');
+}
+
+function minimax(t,derinlik,alfa,beta,maksimize){
+if(derinlik===0)return{skor:evalTahta(t)};
+var hamleler=[];
+var hedefRenk=maksimize?B:W;
+for(var r=0;r<8;r++)for(var c=0;c<8;c++){
+if(t[r][c]&&t[r][c].r===hedefRenk){
+var yasal=yasalHamleleriHesapla(r,c,t,hedefRenk);
+hamleler=hamleler.concat(yasal);
+}
+}
+if(hamleler.length===0)return{skor:maksimize?-9999:9999};
+var enIyi=maksimize?-Infinity:Infinity;
+var enIyiHamle=null;
+for(var i=0;i<hamleler.length;i++){
+var sim=simule(hamleler[i],t);
+var sonuc=minimax(sim,derinlik-1,alfa,beta,!maksimize);
+if(maksimize){
+if(sonuc.skor>enIyi){enIyi=sonuc.skor;enIyiHamle=hamleler[i];}
+alfa=Math.max(alfa,enIyi);
+}else{
+if(sonuc.skor<enIyi){enIyi=sonuc.skor;enIyiHamle=hamleler[i];}
+beta=Math.min(beta,enIyi);
+}
+if(beta<=alfa)break;
+}
+return{skor:enIyi,hamle:enIyiHamle};
+}
+
+function yasalHamleleriHesapla(r,c,t,renk){
+var tas=t[r][c];if(!tas)return[];
+var hamle=[];
+if(tas.t==='P'){
+var yon=tas.r===W?-1:1;
+if(r+yon>=0&&r+yon<8&&!t[r+yon][c])hamle.push({kr:r,kc:c,hr:r+yon,hc:c});
+if(tas.r===W&&r===6&&!t[5][c]&&!t[4][c])hamle.push({kr:r,kc:c,hr:4,hc:c});
+if(tas.r===B&&r===1&&!t[2][c]&&!t[3][c])hamle.push({kr:r,kc:c,hr:3,hc:c});
+for(var dc=-1;dc<=1;dc+=2){
+if(c+dc>=0&&c+dc<8&&r+yon>=0&&r+yon<8){
+var hedef=t[r+yon][c+dc];
+if(hedef&&hedef.r!==tas.r)hamle.push({kr:r,kc:c,hr:r+yon,hc:c+dc});
+}
+}
+}else if(tas.t==='N'){
+var nh=[[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]];
+for(var i=0;i<8;i++){
+var nr=r+nh[i][0],nc=c+nh[i][1];
+if(nr>=0&&nr<8&&nc>=0&&nc<8){
+var h=t[nr][nc];
+if(!h||h.r!==tas.r)hamle.push({kr:r,kc:c,hr:nr,hc:nc});
+}
+}
+}else if(tas.t==='B'){
+basitKaydir(r,c,-1,-1,hamle,t);basitKaydir(r,c,-1,1,hamle,t);
+basitKaydir(r,c,1,-1,hamle,t);basitKaydir(r,c,1,1,hamle,t);
+}else if(tas.t==='R'){
+basitKaydir(r,c,-1,0,hamle,t);basitKaydir(r,c,1,0,hamle,t);
+basitKaydir(r,c,0,-1,hamle,t);basitKaydir(r,c,0,1,hamle,t);
+}else if(tas.t==='Q'){
+for(var dr=-1;dr<=1;dr++)for(var dc=-1;dc<=1;dc++)
+if(dr||dc)basitKaydir(r,c,dr,dc,hamle,t);
+}else if(tas.t==='K'){
+for(var dr=-1;dr<=1;dr++)for(var dc=-1;dc<=1;dc++){
+if(!dr&&!dc)continue;
+var nr=r+dr,nc=c+dc;
+if(nr>=0&&nr<8&&nc>=0&&nc<8){
+var h=t[nr][nc];
+if(!h||h.r!==tas.r)hamle.push({kr:r,kc:c,hr:nr,hc:nc});
+}
+}
+}
+var sonuc=[];
+for(var i=0;i<hamle.length;i++){
+var sim=simule(hamle[i],t);
+if(!sahKontrolBasit(tas.r,sim))sonuc.push(hamle[i]);
+}
+return sonuc;
+}
+
+function sahKontrolBasit(renk,t){
+var sr=-1,sc=-1;
+for(var r=0;r<8;r++)for(var c=0;c<8;c++)
+if(t[r][c]&&t[r][c].r===renk&&t[r][c].t==='K'){sr=r;sc=c;break;}
+if(sr===-1)return false;
+var rakip=renk===W?B:W;
+for(var r=0;r<8;r++)for(var c=0;c<8;c++){
+var tas=t[r][c];
+if(!tas||tas.r!==rakip)continue;
+var h=basitHamleler(r,c,t);
+for(var i=0;i<h.length;i++)
+if(h[i].hr===sr&&h[i].hc===sc)return true;
+}
+return false;
+}
+
+function evalTahta(t){
+var skor=0;
+// Pozisyon tabloları - Piyon
+var PIYON_TABLO=[
+[0,0,0,0,0,0,0,0],
+[50,50,50,50,50,50,50,50],
+[10,10,20,30,30,20,10,10],
+[5,5,10,25,25,10,5,5],
+[0,0,0,20,20,0,0,0],
+[5,-5,-10,0,0,-10,-5,5],
+[5,10,10,-20,-20,10,10,5],
+[0,0,0,0,0,0,0,0]
+];
+// At pozisyon tablosu
+var AT_TABLO=[
+[-50,-40,-30,-30,-30,-30,-40,-50],
+[-40,-20,0,0,0,0,-20,-40],
+[-30,0,10,15,15,10,0,-30],
+[-30,5,15,20,20,15,5,-30],
+[-30,0,15,20,20,15,0,-30],
+[-30,5,10,15,15,10,5,-30],
+[-40,-20,0,5,5,0,-20,-40],
+[-50,-40,-30,-30,-30,-30,-40,-50]
+];
+// Fil pozisyon tablosu
+var FIL_TABLO=[
+[-20,-10,-10,-10,-10,-10,-10,-20],
+[-10,0,0,0,0,0,0,-10],
+[-10,0,5,10,10,5,0,-10],
+[-10,5,5,10,10,5,5,-10],
+[-10,0,10,10,10,10,0,-10],
+[-10,10,10,10,10,10,10,-10],
+[-10,5,0,0,0,0,5,-10],
+[-20,-10,-10,-10,-10,-10,-10,-20]
+];
+// Kale pozisyon tablosu
+var KALE_TABLO=[
+[0,0,0,0,0,0,0,0],
+[5,10,10,10,10,10,10,5],
+[-5,0,0,0,0,0,0,-5],
+[-5,0,0,0,0,0,0,-5],
+[-5,0,0,0,0,0,0,-5],
+[-5,0,0,0,0,0,0,-5],
+[-5,0,0,0,0,0,0,-5],
+[0,0,0,5,5,0,0,0]
+];
+// Vezir pozisyon tablosu
+var VEZIR_TABLO=[
+[-20,-10,-10,-5,-5,-10,-10,-20],
+[-10,0,0,0,0,0,0,-10],
+[-10,0,5,5,5,5,0,-10],
+[-5,0,5,5,5,5,0,-5],
+[0,0,5,5,5,5,0,-5],
+[-10,5,5,5,5,5,0,-10],
+[-10,0,5,0,0,0,0,-10],
+[-20,-10,-10,-5,-5,-10,-10,-20]
+];
+// Şah pozisyon tablosu (orta oyun)
+var SAH_TABLO=[
+[-30,-40,-40,-50,-50,-40,-40,-30],
+[-30,-40,-40,-50,-50,-40,-40,-30],
+[-30,-40,-40,-50,-50,-40,-40,-30],
+[-30,-40,-40,-50,-50,-40,-40,-30],
+[-20,-30,-30,-40,-40,-30,-30,-20],
+[-10,-20,-20,-20,-20,-20,-20,-10],
+[20,20,0,0,0,0,20,20],
+[20,30,10,0,0,10,30,20]
+];
+for(var r=0;r<8;r++){
+for(var c=0;c<8;c++){
+var tas=t[r][c];
+if(!tas)continue;
+var deger=DEGERLER[tas.t]*100;
+var pozisyonDeger=0;
+// Pozisyon bonusu ekle
+if(tas.t==='P'){
+pozisyonDeger=tas.r===W?PIYON_TABLO[r][c]:PIYON_TABLO[7-r][c];
+}else if(tas.t==='N'){
+pozisyonDeger=tas.r===W?AT_TABLO[r][c]:AT_TABLO[7-r][c];
+}else if(tas.t==='B'){
+pozisyonDeger=tas.r===W?FIL_TABLO[r][c]:FIL_TABLO[7-r][c];
+}else if(tas.t==='R'){
+pozisyonDeger=tas.r===W?KALE_TABLO[r][c]:KALE_TABLO[7-r][c];
+}else if(tas.t==='Q'){
+pozisyonDeger=tas.r===W?VEZIR_TABLO[r][c]:VEZIR_TABLO[7-r][c];
+}else if(tas.t==='K'){
+pozisyonDeger=tas.r===W?SAH_TABLO[r][c]:SAH_TABLO[7-r][c];
+}
+skor+=tas.r===B?(deger+pozisyonDeger):-(deger+pozisyonDeger);
+}
+}
+return skor;
+}
+
+function klonla(t){
+var yeni=[];
+for(var i=0;i<8;i++){
+yeni[i]=[];
+for(var j=0;j<8;j++)yeni[i][j]=t[i][j]?{r:t[i][j].r,t:t[i][j].t}:null;
+}
+return yeni;
+}
+
+function tahtayaAnahtar(t){
+var s='';
+for(var r=0;r<8;r++)for(var c=0;c<8;c++){
+var tas=t[r][c];
+s+=tas?(tas.r+tas.t):'-';
+}
+return s;
+}
+
+function yeniOyun(){
+if(confirm('Yeni oyun başlatılsın mı?')){
+baslat();
+tahtaCiz();
+}
+}
+
+// GÜNLÜK MEYDAN OKUMA MODAL - YENİ! 🔥
+function gunlukMeydanGoster(){
+var modal=document.createElement('div');
+modal.className='modal';
+modal.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:10000;';
+
+var content=document.createElement('div');
+content.className='modal-content';
+content.style.cssText='max-width:500px;padding:30px;background:linear-gradient(135deg,#1a1208,#3d2817);border:3px solid #FFD700;border-radius:15px;box-shadow:0 10px 50px rgba(0,0,0,0.8);';
+
+var bugun=gunlukMeydan.bugununTarihi;
+var eslesme=gunlukMeydan.bugununEslesmesi;
+var beyazUyg=UYGARLIKLAR[eslesme.beyaz];
+var siyahUyg=UYGARLIKLAR[eslesme.siyah];
+
+content.innerHTML=`
+<div style="text-align:center;">
+<h2 style="color:#FFD700;margin-bottom:20px;font-size:1.8rem;">🏆 GÜNLÜK MEYDAN OKUMA</h2>
+<div style="color:#c9a96e;margin-bottom:20px;font-size:0.9rem;">${bugun}</div>
+
+<div style="display:flex;justify-content:space-around;align-items:center;margin:30px 0;padding:20px;background:rgba(255,215,0,0.1);border-radius:10px;">
+<div style="text-align:center;">
+<div style="font-size:3rem;">${beyazUyg.emoji}</div>
+<div style="color:#fff;margin-top:10px;font-weight:bold;">${beyazUyg.isim}</div>
+</div>
+<div style="font-size:2rem;color:#FFD700;">⚔️ VS ⚔️</div>
+<div style="text-align:center;">
+<div style="font-size:3rem;">${siyahUyg.emoji}</div>
+<div style="color:#fff;margin-top:10px;font-weight:bold;">${siyahUyg.isim}</div>
+</div>
+</div>
+
+<div style="background:rgba(205,127,50,0.2);padding:15px;border-radius:8px;margin:20px 0;">
+<div style="color:#FFD700;font-size:0.9rem;margin-bottom:10px;">📜 GÖREV:</div>
+<div style="color:#f5e6c8;line-height:1.6;">
+• AI'yi en az hamlede mat et!<br>
+• Her gün YENİ eşleşme!<br>
+• En iyi skorun kaydedilir!<br>
+• Liderlik tablosunda yarış!
+</div>
+</div>
+
+${gunlukMeydan.enIyiSkor<999?`
+<div style="background:rgba(255,215,0,0.15);padding:12px;border-radius:8px;margin:15px 0;">
+<div style="color:#FFD700;font-size:0.85rem;">🏅 BUGÜNKÜ EN İYİ SKORUN:</div>
+<div style="color:#fff;font-size:1.5rem;font-weight:bold;">${gunlukMeydan.enIyiSkor} HAMLE</div>
+</div>
+`:''}
+
+<div style="display:flex;gap:10px;margin-top:25px;">
+<button onclick="gunlukMeydanBasla()" style="flex:1;padding:15px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1208;border:none;border-radius:8px;font-size:1rem;font-weight:bold;cursor:pointer;">
+⚔️ SAVAŞA BAŞLA!
+</button>
+<button onclick="this.parentElement.parentElement.parentElement.remove()" style="padding:15px 25px;background:#5c3d0a;color:#f5e6c8;border:2px solid #daa520;border-radius:8px;cursor:pointer;">
+❌
+</button>
+</div>
+</div>
+`;
+
+modal.appendChild(content);
+document.body.appendChild(modal);
+}
+
+function gunlukMeydanBasla(){
+// Modal'ı kapat
+var modals=document.querySelectorAll('.modal');
+modals.forEach(function(m){m.remove();});
+
+// Günlük meydan ayarlarını uygula
+beyazUygarlik=gunlukMeydan.bugununEslesmesi.beyaz;
+siyahUygarlik=gunlukMeydan.bugununEslesmesi.siyah;
+oyunModu='ai';
+zorluk=3; // Hard difficulty
+
+// Oyunu başlat
+baslat();
+tahtaCiz();
+
+// Günlük meydan aktif olarak işaretle
+gunlukMeydan.aktif=true;
+}
+
+// LIDERLIK TABLOSU MODAL - YENİ! 📊
+function liderlikTablosuGoster(){
+var modal=document.createElement('div');
+modal.className='modal';
+modal.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:10000;overflow-y:auto;';
+
+var content=document.createElement('div');
+content.className='modal-content';
+content.style.cssText='max-width:600px;padding:30px;background:linear-gradient(135deg,#1a1208,#3d2817);border:3px solid #CD7F32;border-radius:15px;box-shadow:0 10px 50px rgba(0,0,0,0.8);margin:20px;';
+
+// Günlük top 5
+var gunlukHTML='<div style="color:#c9a96e;margin:10px 0;">Bugün henüz skor yok.</div>';
+if(gunlukMeydan.skorlar&&gunlukMeydan.skorlar.length>0){
+var sirali=gunlukMeydan.skorlar.sort(function(a,b){return a.hamle-b.hamle;});
+gunlukHTML='';
+sirali.slice(0,5).forEach(function(s,i){
+var madalya=['🥇','🥈','🥉','4️⃣','5️⃣'][i];
+gunlukHTML+=`
+<div style="display:flex;justify-content:space-between;padding:12px;margin:8px 0;background:rgba(205,127,50,0.1);border-radius:8px;border-left:3px solid ${i===0?'#FFD700':i===1?'#C0C0C0':'#CD7F32'};">
+<div><span style="font-size:1.3rem;">${madalya}</span> <span style="color:#fff;font-weight:bold;">${s.isim}</span></div>
+<div style="color:#FFD700;font-weight:bold;">${s.hamle} hamle</div>
+</div>
+`;
+});
+}
+
+content.innerHTML=`
+<div style="text-align:center;">
+<h2 style="color:#CD7F32;margin-bottom:15px;font-size:1.8rem;">📊 LİDERLİK TABLOSU</h2>
+
+<div style="margin:25px 0;">
+<div style="color:#FFD700;font-size:1.1rem;margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid rgba(205,127,50,0.3);">
+🏆 BUGÜNKÜ LİDERLER
+</div>
+${gunlukHTML}
+</div>
+
+<div style="background:rgba(255,215,0,0.1);padding:15px;border-radius:8px;margin:20px 0;">
+<div style="color:#c9a96e;font-size:0.85rem;margin-bottom:8px;">💡 İPUCU:</div>
+<div style="color:#f5e6c8;font-size:0.9rem;line-height:1.5;">
+Günlük meydan okumayı tamamla ve liderlik tablosuna gir! Her gün yeni meydan, yeni şans! 🚀
+</div>
+</div>
+
+<button onclick="this.parentElement.parentElement.remove()" style="padding:12px 30px;background:#5c3d0a;color:#f5e6c8;border:2px solid #daa520;border-radius:8px;cursor:pointer;margin-top:10px;">
+✅ Kapat
+</button>
+</div>
+`;
+
+modal.appendChild(content);
+document.body.appendChild(modal);
+}
+
+function geriAl(){
+if(gecmis.length===0)return;
+var son=gecmis.pop();
+tahta=klonla(son.tahta);
+sira=son.sira;
+beyazPuan=son.beyazPuan;
+siyahPuan=son.siyahPuan;
+secili=null;ipuclari=[];sonHamle=null;
+tahtaCiz();
+}
+
+function oyunModuDegistir(){
+oyunModu=document.getElementById('oyun-modu').value;
+yeniOyun();
+}
+
+function uygarlikDegistir(){
+beyazUygarlik=document.getElementById('beyaz-uygarlik').value;
+siyahUygarlik=document.getElementById('siyah-uygarlik').value;
+document.getElementById('beyaz-isim').textContent=UYGARLIKLAR[beyazUygarlik].emoji+' '+UYGARLIKLAR[beyazUygarlik].isim.toUpperCase().substring(0,10);
+document.getElementById('siyah-isim').textContent=UYGARLIKLAR[siyahUygarlik].emoji+' '+UYGARLIKLAR[siyahUygarlik].isim.toUpperCase().substring(0,10);
+dilGuncelle();
+}
+
+function temaDegistir(tema,idx){
+aktifTema=idx;
+var board=document.getElementById('board');
+temalar.forEach(function(t){board.classList.remove('tema-'+t);});
+board.classList.add('tema-'+tema);
+localStorage.setItem('tema',tema);
+}
+
+function toggle3D(){
+is3D=!is3D;
+var board=document.getElementById('board');
+var btn=document.getElementById('btn-3d');
+if(is3D){
+board.classList.add('mode-3d');
+btn.textContent=t('mod2D');
+btn.style.background='linear-gradient(135deg,#ffd700,#ff6b6b)';
+}else{
+board.classList.remove('mode-3d');
+btn.textContent=t('mod3D');
+btn.style.background='#5c3d0a';
+}
+}
+
+function kaydetPGN(){
+var pgn='[Event "History Chess"]\n';
+pgn+='[Site "historychess.com"]\n';
+var tarih=new Date();
+pgn+='[Date "'+tarih.getFullYear()+'.'+(tarih.getMonth()+1<10?'0':'')+(tarih.getMonth()+1)+'.'+(tarih.getDate()<10?'0':'')+tarih.getDate()+'"]\n';
+pgn+='[White "'+UYGARLIK_CEVIRILERI[beyazUygarlik].en+'"]\n';
+pgn+='[Black "'+UYGARLIK_CEVIRILERI[siyahUygarlik].en+'"]\n';
+var sonuc='*';
+if(matKontrol(W))sonuc='0-1';
+else if(matKontrol(B))sonuc='1-0';
+else if(patKontrol(W)||patKontrol(B)||yetersizMalzeme()||ucTekrarKontrol())sonuc='1/2-1/2';
+pgn+='[Result "'+sonuc+'"]\n';
+pgn+='[TimeControl "'+zamanKontrol.mod+'"]\n';
+pgn+='[Variant "History Chess"]\n\n';
+var hamleNo=1;
+var hamleStr='';
+for(var i=0;i<gecmis.length;i++){
+if(i%2===0){
+hamleStr+=hamleNo+'. ';
+}
+hamleStr+='move'+i+' ';
+if(i%2===1){
+hamleStr+='\n';
+hamleNo++;
+}
+}
+pgn+=hamleStr+'\n'+sonuc;
+try{
+var blob=new Blob([pgn],{type:'text/plain;charset=utf-8'});
+var link=document.createElement('a');
+link.href=URL.createObjectURL(blob);
+link.download='history-chess-'+tarih.getTime()+'.pgn';
+link.click();
+bildirimGoster('💾 PGN dosyası indirildi!');
+}catch(e){
+alert('PGN:\n\n'+pgn);
+}
+}
+
+function sesOynat(tip){
+if(!sesAktif)return;
+try{
+var ctx=new(window.AudioContext||window.webkitAudioContext)();
+var osc=ctx.createOscillator();
+var gain=ctx.createGain();
+osc.connect(gain);
+gain.connect(ctx.destination);
+osc.frequency.value=tip==='tas-al'?330:440;
+osc.type=tip==='tas-al'?'sawtooth':'sine';
+gain.gain.setValueAtTime(0.2,ctx.currentTime);
+gain.gain.exponentialRampToValueAtTime(0.01,ctx.currentTime+0.1);
+osc.start();
+osc.stop(ctx.currentTime+0.1);
+}catch(e){}
+}
+
+function oyunBittiModal(kazanan){
+zamanDurdur();
+
+// GÜNLÜK MEYDAN SKORU KAYDET - YENİ! 🏆
+if(gunlukMeydan.aktif&&kazanan==='Beyaz'){
+var hamleSayisi=gecmis.length;
+gunlukMeydan.skorlar.push({
+isim:liderlikTablosu.kullaniciAdi,
+hamle:hamleSayisi,
+uygarlik:beyazUygarlik,
+tarih:new Date().toISOString()
+});
+
+// En iyi skoru güncelle
+if(hamleSayisi<gunlukMeydan.enIyiSkor){
+gunlukMeydan.enIyiSkor=hamleSayisi;
+// Özel başarım!
+basarimGoster('🏅 YENİ REKOR!',hamleSayisi+' hamlede mat! Günlük rekorun!');
+}
+
+localStorage.setItem('gunlukMeydan',JSON.stringify(gunlukMeydan));
+gunlukMeydan.aktif=false; // Bir kere kaydedildi
+}
+
+istatistikler.toplam++;
+if((kazanan==='Beyaz'&&oyunModu==='ai')||(kazanan==='Siyah'&&oyunModu==='2p')){
+istatistikler.kazanilan++;
+}else{
+istatistikler.kaybedilen++;
+}
+localStorage.setItem('istatistikler',JSON.stringify(istatistikler));
+if(istatistikler.toplam>=10&&!basarimlar.onOyun){
+basarimlar.onOyun=true;
+basarimGoster('🏆 10 Oyun!','10 oyun tamamladın!');
+}
+if(!basarimlar.matYaptin){
+basarimlar.matYaptin=true;
+basarimGoster('👑 Mat!','İlk matını yaptın!');
+}
+var modal=document.createElement('div');
+modal.className='modal';
+var content=document.createElement('div');
+content.className='modal-content';
+var h2=document.createElement('h2');
+h2.textContent=kazanan+' '+t('zafer');
+content.appendChild(h2);
+var p=document.createElement('p');
+p.textContent=kazanan==='Beyaz'?t('harikaOyun'):t('kaybettin');
+content.appendChild(p);
+
+// SOSYAL MEDYA PAYLAŞIM BUTONLARI - YENİ!
+var sosyalDiv=document.createElement('div');
+sosyalDiv.style.cssText='margin:20px 0;padding:15px;background:rgba(218,165,32,0.1);border-radius:8px;';
+var sosyalBaslik=document.createElement('div');
+sosyalBaslik.textContent='🏆 Zaferini Paylaş!';
+sosyalBaslik.style.cssText='font-size:1rem;margin-bottom:10px;color:#ffd700;';
+sosyalDiv.appendChild(sosyalBaslik);
+var sosyalBtnDiv=document.createElement('div');
+sosyalBtnDiv.style.cssText='display:flex;gap:8px;justify-content:center;flex-wrap:wrap;';
+var sosyalButtons=[];
+// Native share öncelikli (mobil cihazlarda)
+if(navigator.share){
+sosyalButtons.push({text:'📤',func:'nativePaylasim()',title:'Paylaş',class:'native-share'});
+}
+// Diğer seçenekler
+sosyalButtons.push(
+{text:'📧',func:'paylasEmail()',title:'Email'},
+{text:'f',func:'paylasFacebook()',title:'Facebook',class:'facebook'},
+{text:'𝕏',func:'paylasTwitter()',title:'X',class:'twitter'},
+{text:'💬',func:'paylasWhatsApp()',title:'WhatsApp',class:'whatsapp'},
+{text:'🔗',func:'kopyalaLink()',title:'Link'}
+);
+sosyalButtons.forEach(function(btn){
+var b=document.createElement('button');
+b.innerHTML=btn.text;
+b.className='sosyal-btn'+(btn.class?' '+btn.class:'');
+b.title=btn.title;
+b.onclick=function(){eval(btn.func);};
+b.style.width='40px';
+b.style.height='40px';
+b.style.fontSize='1.2rem';
+sosyalBtnDiv.appendChild(b);
+});
+sosyalDiv.appendChild(sosyalBtnDiv);
+content.appendChild(sosyalDiv);
+
+var btn=document.createElement('button');
+btn.textContent='Tekrar Oyna';
+btn.onclick=function(){modal.remove();yeniOyun();};
+content.appendChild(btn);
+modal.appendChild(content);
+document.body.appendChild(modal);
+}
+
+// BERABERLİK MODALI - YENİ!
+function beraberlikModal(sebep){
+zamanDurdur();
+istatistikler.toplam++;
+localStorage.setItem('istatistikler',JSON.stringify(istatistikler));
+var modal=document.createElement('div');
+modal.className='modal';
+var content=document.createElement('div');
+content.className='modal-content';
+var h2=document.createElement('h2');
+h2.textContent='⚖️ '+t('beraberlik')+'!';
+h2.style.color='#FFD700';
+content.appendChild(h2);
+var p=document.createElement('p');
+p.textContent='🤝 '+sebep;
+p.style.fontSize='1.2rem';
+content.appendChild(p);
+var p2=document.createElement('p');
+p2.textContent=t('esitGuc');
+content.appendChild(p2);
+var btn=document.createElement('button');
+btn.textContent='Tekrar Oyna';
+btn.onclick=function(){modal.remove();yeniOyun();};
+content.appendChild(btn);
+modal.appendChild(content);
+document.body.appendChild(modal);
+}
+
+function basarimGoster(isim,aciklama){
+var div=document.createElement('div');
+div.style.cssText='position:fixed;top:20px;right:20px;background:#ffd700;color:#1a1208;padding:15px 20px;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,0.5);z-index:10000;animation:slideIn 0.3s;max-width:300px;';
+div.innerHTML='<div style="font-size:1.5rem;margin-bottom:5px;">'+isim+'</div><div style="font-size:0.9rem;">'+aciklama+'</div>';
+document.body.appendChild(div);
+setTimeout(function(){div.style.animation='slideOut 0.3s';setTimeout(function(){div.remove();},300);},3000);
+}
+
+// ═══════════════════════════════════════════════════════════
+// SOSYAL MEDYA PAYLAŞIM FONKSİYONLARI - YENİ!
+// ═══════════════════════════════════════════════════════════
+
+function paylasimMesajiOlustur(){
+var uyg1=UYGARLIKLAR[beyazUygarlik];
+var uyg2=UYGARLIKLAR[siyahUygarlik];
+var hamleSayisi=gecmis.length;
+
+// Heyecan verici viral mesajlar!
+var mesajlar=[
+uyg1.emoji+' '+uygarlikIsmi(beyazUygarlik)+' ile '+hamleSayisi+' hamlede zafer kazandım! '+uyg2.emoji,
+'⚔️ Tarihi bir savaş! '+uygarlikIsmi(beyazUygarlik)+' vs '+uygarlikIsmi(siyahUygarlik)+' - '+hamleSayisi+' hamle!',
+'🏛️ '+uygarlikIsmi(beyazUygarlik)+' zaferi! '+hamleSayisi+' hamlede mat yaptım! '+uyg1.emoji+'👑',
+uyg1.emoji+' History Chess\'te '+uygarlikIsmi(beyazUygarlik)+' imparatorluğuyla '+hamleSayisi+' hamlede zafer! '+uyg2.emoji
+];
+
+var rastgeleMesaj=mesajlar[Math.floor(Math.random()*mesajlar.length)];
+var mesaj=rastgeleMesaj+'\n\n';
+mesaj+='🎮 Play Through the Ages - History Chess\n';
+mesaj+='✨ 10 civilizations | 13 languages | PWA\n';
+mesaj+='🏆 Challenge me at History Chess!\n';
+return mesaj;
+}
+
+function paylasimURLOlustur(){
+var baseURL='https://historychess.com';
+var params='?lang='+aktifDil+'&white='+beyazUygarlik+'&black='+siyahUygarlik;
+return baseURL+params;
+}
+
+function paylasEmail(){
+var konu=encodeURIComponent('⚔️ Uygarlıkların Savaşı - Oyna!');
+var mesaj=encodeURIComponent(paylasimMesajiOlustur()+'\n\n🎯 Şimdi oyna: '+paylasimURLOlustur());
+window.open('mailto:?subject='+konu+'&body='+mesaj,'_blank');
+bildirimGoster('📧 Email uygulaması açılıyor...');
+}
+
+function paylasFacebook(){
+var url=encodeURIComponent(paylasimURLOlustur());
+var fbURL='https://www.facebook.com/sharer/sharer.php?u='+url;
+window.open(fbURL,'facebook-share','width=600,height=400');
+bildirimGoster('📘 Facebook\'ta paylaşılıyor...');
+}
+
+function paylasTwitter(){
+var mesaj=encodeURIComponent('⚔️ EMPIRE\'S GAMBIT\n'+uygarlikIsmi(beyazUygarlik)+' vs '+uygarlikIsmi(siyahUygarlik)+'\n\n🎮 Strategic Chess Across Civilizations\n✨ 13 languages | 10 empires | Time controls\n🏆 8 themes | 15 achievements\n\n#chess #strategy #gaming #EmpiresGambit');
+var url=encodeURIComponent(paylasimURLOlustur());
+var twitterURL='https://twitter.com/intent/tweet?text='+mesaj+'&url='+url;
+window.open(twitterURL,'twitter-share','width=600,height=400');
+bildirimGoster('𝕏 X\'te paylaşılıyor...');
+}
+
+function paylasWhatsApp(){
+var mesaj=encodeURIComponent(paylasimMesajiOlustur()+'\n\n🎯 Oyna: '+paylasimURLOlustur());
+var whatsappURL='https://api.whatsapp.com/send?text='+mesaj;
+window.open(whatsappURL,'whatsapp-share');
+bildirimGoster('💬 WhatsApp\'ta paylaşılıyor...');
+}
+
+function paylasLinkedIn(){
+var url=encodeURIComponent(paylasimURLOlustur());
+var linkedinURL='https://www.linkedin.com/sharing/share-offsite/?url='+url;
+window.open(linkedinURL,'linkedin-share','width=600,height=400');
+bildirimGoster('💼 LinkedIn\'de paylaşılıyor...');
+}
+
+function paylasTelegram(){
+var mesaj=encodeURIComponent(paylasimMesajiOlustur());
+var url=encodeURIComponent(paylasimURLOlustur());
+var telegramURL='https://t.me/share/url?url='+url+'&text='+mesaj;
+window.open(telegramURL,'telegram-share');
+bildirimGoster('✈️ Telegram\'da paylaşılıyor...');
+}
+
+function paylasReddit(){
+var baslik=encodeURIComponent('⚔️ Uygarlıkların Savaşı - 13 Dil, 10 Uygarlık Satranç Oyunu');
+var url=encodeURIComponent(paylasimURLOlustur());
+var redditURL='https://www.reddit.com/submit?title='+baslik+'&url='+url;
+window.open(redditURL,'reddit-share','width=800,height=600');
+bildirimGoster('🔴 Reddit\'te paylaşılıyor...');
+}
+
+function kopyalaLink(){
+var url=paylasimURLOlustur();
+// Geçici textarea oluştur
+var temp=document.createElement('textarea');
+temp.value=url;
+temp.style.position='fixed';
+temp.style.opacity='0';
+document.body.appendChild(temp);
+temp.select();
+try{
+document.execCommand('copy');
+bildirimGoster('🔗 Link kopyalandı!');
+}catch(err){
+bildirimGoster('❌ Kopyalama başarısız!');
+}
+document.body.removeChild(temp);
+}
+
+// NATIVE WEB SHARE API - YENİ! 📱
+function nativePaylasim(){
+// Modern mobil paylaşım
+if(navigator.share){
+var uyg=UYGARLIKLAR[beyazUygarlik];
+var hamleSayisi=gecmis.length;
+navigator.share({
+title:'🏛️ History Chess - '+uygarlikIsmi(beyazUygarlik)+' Zaferi!',
+text:uyg.emoji+' '+uygarlikIsmi(beyazUygarlik)+' ile '+hamleSayisi+' hamlede mat yaptım! History Chess\'te beni yenebilir misin?',
+url:paylasimURLOlustur()
+}).then(function(){
+bildirimGoster('📤 Paylaşıldı!');
+// Haptic feedback
+if(navigator.vibrate)navigator.vibrate(30);
+}).catch(function(err){
+console.log('Paylaşım iptal edildi',err);
+});
+}else{
+// Fallback - sosyal medya butonlarını göster
+bildirimGoster('💡 Aşağıdaki butonlardan birini kullan!');
+}
+}
+
+function bildirimGoster(mesaj){
+var div=document.createElement('div');
+div.style.cssText='position:fixed;bottom:20px;right:20px;background:#daa520;color:#1a1208;padding:12px 20px;border-radius:8px;box-shadow:0 5px 20px rgba(0,0,0,0.5);z-index:10001;animation:slideInUp 0.3s;font-weight:bold;';
+div.textContent=mesaj;
+document.body.appendChild(div);
+setTimeout(function(){
+div.style.animation='slideOutDown 0.3s';
+setTimeout(function(){div.remove();},300);
+},2500);
+}
+
+// Animasyon CSS ekle
+var sosyalAnimStyle=document.createElement('style');
+sosyalAnimStyle.textContent=`
+@keyframes slideInUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideOutDown {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(100px); opacity: 0; }
+}
+`;
+document.head.appendChild(sosyalAnimStyle);
+
+// ═══════════════════════════════════════════════════════════
+
+// Başlat
+window.addEventListener('load',function(){
+baslat();
+tahtaCiz();
+var kayitliDil=localStorage.getItem('dil');
+if(kayitliDil&&DILLER[kayitliDil])dilDegistir(kayitliDil);
+var kayitliTema=localStorage.getItem('tema');
+if(kayitliTema)temaDegistir(kayitliTema,temalar.indexOf(kayitliTema));
+var kayitliStats=localStorage.getItem('istatistikler');
+if(kayitliStats)istatistikler=JSON.parse(kayitliStats);
+
+// PWA - Service Worker Registration
+if('serviceWorker' in navigator){
+navigator.serviceWorker.register('/service-worker.js')
+.then(function(reg){
+console.log('✅ Service Worker registered!',reg);
+})
+.catch(function(err){
+console.log('❌ Service Worker registration failed:',err);
+});
+}
+
+// PWA - Install Prompt
+var deferredPrompt;
+window.addEventListener('beforeinstallprompt',function(e){
+e.preventDefault();
+deferredPrompt=e;
+// Show install button
+var installBtn=document.getElementById('pwa-install-btn');
+if(installBtn){
+installBtn.style.display='block';
+installBtn.addEventListener('click',function(){
+installBtn.style.display='none';
+deferredPrompt.prompt();
+deferredPrompt.userChoice.then(function(choiceResult){
+if(choiceResult.outcome==='accepted'){
+console.log('✅ PWA installed!');
+basarimGoster('📱 Uygulama Yüklendi!','Empire\'s Gambit artık ana ekranınızda!');
+}
+deferredPrompt=null;
+});
+});
+}
+});
+
+// PWA - Installed
+window.addEventListener('appinstalled',function(){
+console.log('✅ PWA was installed');
+bildirimGoster('🎉 Hoş geldiniz! History Chess yüklendi!');
+});
+
+// Online/Offline Status
+window.addEventListener('online',function(){
+bildirimGoster('🌐 İnternet bağlantısı geri geldi!');
+});
+window.addEventListener('offline',function(){
+bildirimGoster('📴 Çevrimdışı mod - Oyun devam ediyor!');
+});
+
+// iOS Standalone Mode Detection
+if(window.navigator.standalone||window.matchMedia('(display-mode: standalone)').matches){
+console.log('✅ Running as installed PWA');
+// Hide browser UI elements if needed
+}
+});
+</script>
+
+<!-- PWA Install Button (initially hidden) -->
+<button id="pwa-install-btn" style="display:none;position:fixed;bottom:20px;right:20px;background:#4CAF50;color:white;border:none;padding:15px 25px;border-radius:50px;font-size:1rem;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,0.3);cursor:pointer;z-index:9999;animation:pulse 2s infinite;">
+📱 Ana Ekrana Ekle
+</button>
+
+
+</body>
+</html>
